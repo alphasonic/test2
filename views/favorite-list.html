@@ -1,0 +1,27 @@
+<div ng-controller="FavoriteListCtrl">
+	<div class="empty space-top" ng-show="isFavoriteEmpty()">
+		<i class="fa fa-heart-o fa-4x"></i>
+		<p>Vous n'avez pas de favoris</p>
+	</div>
+	<div ng-hide="isFavoriteEmpty()">
+		<ul class="listview" clean-scroll ng-model="selectedElement">
+			<li ng-repeat="prod in products" id="{{prod.ID}}">
+				<div class="row">
+					<div class="col-right-icon">
+						<a data-theme="c" ng-tap="addToCart(prod.ID)" data-icon="plus"><i class="fa fa-plus"></i></a>
+					</div>
+					<div class="col100 has-right-icon">
+						<a ng-tap="displayProduct(prod.ID)">
+							<div class="quantity">
+								<span ng-hide="getQuantity(prod.ID)==0">{{getQuantity(prod.ID)}}</span>
+							</div> {{prod.NAME}}
+							<div class="price">
+								{{prod.PIECES}} pcs, {{prod.PRICE | currency:'€'}}
+							</div>
+						</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div ng-controller="ShopCtrl">
+	<h2>Boutique</h2>
+	<h3>{{shop.NAME}}</h3>
+	<h2>Adresse</h2>
+	<p>{{shop.address.STREET_NAME}} {{shop.address.STREET_NB}}</p>
+    <p>{{shop.address.POSTCODE}} {{shop.address.CITY}}</p>
+    <h2>Horaires</h2>
+    <p>
+    	<ul>
+    		<li>Lundi: {{getSchedule('day0')}}</li>
+    		<li>Mardi: {{getSchedule('day1')}}</li>
+    		<li>Mercredi: {{getSchedule('day2')}}</li>
+    		<li>Jeudi: {{getSchedule('day3')}}</li>
+    		<li>Vendredi: {{getSchedule('day4')}}</li>
+    		<li>Samedi: {{getSchedule('day5')}}</li>
+    		<li>Dimanche: {{getSchedule('day6')}}</li>
+    	</ul>
+    </p>
+</div>

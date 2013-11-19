@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="SushiBar">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>My AngularJS App</title>
+		<link rel="stylesheet" href="css/final.css"/>
+		<script type="text/javascript" src="final.min.js"></script>
+	</head>
+	<body>
+		<div id="container" ng-controller="AppCtrl">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top">
+					<form class="navbar-form navbar-left" role="search" ng-show="showBack()">
+						<button ng-tap="goBack()" type="submit" class="btn btn-default">
+							<i class="fa fa-arrow-circle-left"></i> Retour
+						</button>
+					</form>
+					<div class="navbar-brand">
+						Sushi-shop
+					</div>
+				</nav>
+			</header>
+			<div id="content" ng-include="updatePage()" class="animate"></div>
+			<footer>
+				<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+					<ul class="nav navbar-nav">
+						<li ng-class="active('carte-category-list')">
+							<a ng-tap="changePage('carte-category-list')"><i class="fa fa-coffee fa-2x"></i></a>
+						</li>
+						<li ng-class="active('favorite-list')">
+							<a ng-tap="changePage('favorite-list')"><i class="fa fa-star fa-2x"></i></a>
+						</li>
+						<li ng-class="active('order-details')">
+							<a ng-tap="changePage('order-details')"><i class="fa fa-shopping-cart fa-2x"></i></a>
+						</li>
+						<li ng-class="active('shop-list')">
+							<a ng-tap="changePage('shop-list')"><i class="fa fa-home fa-2x"></i></a>
+						</li>
+						<li ng-class="active('profil')">
+							<a ng-tap="changePage('profil')"><i class="fa fa-user fa-2x"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+	</body>
+</html>

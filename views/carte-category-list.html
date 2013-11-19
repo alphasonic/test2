@@ -1,0 +1,21 @@
+<div id="carte-category-list" ng-controller="CarteCategoryListCtrl">
+	<div class="header-container category-header">
+		<img ng-src="{{imageUrl}}" class="img-responsive"/>
+	</div>
+	<div class="category-list">
+		<ul class="listview" clean-scroll ng-model="selectedElement" elements="categories">
+			<li ng-repeat="cat in categories" id="{{cat.ID}}">
+				<div class="row">
+					<a ng-tap="displayProductList(cat.ID)">
+						<div class="col-right-icon">
+							<i class="fa fa-chevron-circle-right"></i>
+						</div>
+						<div class="col100 has-right-icon">
+							{{cat.NAME}}
+						</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

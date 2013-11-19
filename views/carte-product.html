@@ -1,0 +1,23 @@
+<div id="carte-product" ng-controller="CarteProductCtrl">
+	<div class="product-header">
+		<img ng-src="{{imageUrl}}" class="img-responsive"/>
+	</div>
+	<div class="product-description">
+		<div id="title">
+			<h2>{{product.NAME}}</h2>
+			<p>
+				{{product.PIECES}}
+			</p>
+			<p>
+				{{product.PRICE | currency:'€'}}
+			</p>
+		</div>
+		<div id="description"></div>
+		<div class="btn-group btn-group-justified">
+			<a ng-tap="removeOne()" class="btn btn-default"> <i class="fa fa-minus fa-2x"></i> </a>
+			<a class="btn btn-default"> {{getQuantity()}} </a>
+			<a ng-tap="addOne()" class="btn btn-default"> <i class="fa fa-plus fa-2x"></i> </a>
+			<a ng-tap="toogleFavorite()" class="btn btn-default"> <i ng-hide="isFavorite()" class="fa fa-heart-o fa-2x"></i> <i ng-show="isFavorite()" class="fa fa-heart fa-2x"></i> </a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="space-top" ng-controller="EntranceCtrl">
+	<div ng-show="displayLogin">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="login" class="col-sm-3 control-label">Login:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="login" ng-model="profil.LOGIN" placeholder="Login">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-3 control-label">Mot de passe:</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" id="password" ng-model="profil.PASSWORD" placeholder="Mot de passe">
+				</div>
+			</div>
+			<div class="btn-group btn-group-justified space-full">
+				<a class="btn btn-primary" ng-tap="login()"><i class="fa fa-sign-in"></i> Login </a>
+			</div>
+		</form>
+	</div>
+</div>

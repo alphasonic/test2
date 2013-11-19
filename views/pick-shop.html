@@ -1,0 +1,21 @@
+<div ng-controller="PickShopAddressCtrl">
+	<h3> Choisissez une adresse : </h3>
+	<ul class="listview">
+		<li ng-repeat="shop in shops">
+			<a ng-tap="selectAddress(shop)">
+				<div>
+					{{shop.NAME}}
+				</div>
+				<div>
+					{{shop.address.STREET_NAME}} <span ng-show="isStreetName2Null(shop.address)">{{shop.address.STREET_NB}} {{shop.address.BELL}}</span>
+				</div>
+				<div ng-hide="isStreetName2Null(shop.address)">
+					{{shop.address.STREET_NAME2}} {{shop.address.STREET_NB}} {{shop.address.BELL}}
+				</div>
+				<div>
+					{{shop.address.POSTCODE}} {{shop.address.CITY}}
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>

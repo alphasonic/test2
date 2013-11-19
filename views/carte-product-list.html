@@ -1,0 +1,29 @@
+<div id="carte-product-list" ng-controller="CarteProductListCtrl">
+	<div class="header-container product-header">
+		<img ng-src="{{imageUrl}}" class="img-responsive"/>
+	</div>
+	<div class="product-list">
+		<ul class="listview" clean-scroll ng-model="selectedElement">
+			<li ng-repeat="prod in products" id="{{prod.ID}}">
+				<div class="row">
+					<div class="col-right-icon">
+						<a data-theme="c" ng-tap="addToCart(prod.ID)" data-icon="plus"><i class="fa fa-plus"></i></a>
+					</div>
+					<div class="col100 has-right-icon">
+						<a ng-tap="displayProduct(prod.ID)">
+						<div class="quantity">
+							<span ng-hide="getQuantity(prod.ID)==0">{{getQuantity(prod.ID)}}</span>
+						</div>
+						<div class="price">
+							{{prod.PIECES}} pcs, {{prod.PRICE | currency:'€'}}
+						</div>
+						<div class="name">
+							{{prod.NAME}}
+						</div>
+						 </a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

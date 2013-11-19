@@ -1,0 +1,19 @@
+<div ng-controller="ShopListCtrl">
+	<ul class="listview">
+		<li ng-repeat="shop in shops">
+			<div class="row">
+				<a ng-tap="selectShop(shop.ID)">
+					<div class="col-right-icon">
+						<i class="fa fa-chevron-circle-right"></i>
+					</div>
+					<div class="col100">
+		                <div><strong>{{shop.NAME}}</strong></div>
+		                <div>{{shop.address.STREET_NAME}} {{shop.address.STREET_NB}}</div>
+		                <div>{{shop.address.POSTCODE}} {{shop.address.CITY}}</div>
+		                <div class="ui-li-aside">2 KM</div>
+		            </div>
+		        </a>
+            </div>
+		</li>
+	</ul>
+</div>
