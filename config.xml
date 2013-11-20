@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<widget id="com.tmas.shopiready" version="0.0.1">
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.tmas.shopiready"
+        versionCode="10" 
+        version   = "1.0.0">
+        
 	<name>Sushilines</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
