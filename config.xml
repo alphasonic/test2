@@ -6,4 +6,5 @@
 	<access origin="*" />
 	<preference name="Fullscreen" value="true" />
 	<preference name="WebViewBounce" value="false" />
+	<access origin="http://www.shopiready.com" subdomains="true" />
 </widget>
