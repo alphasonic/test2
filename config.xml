@@ -1,4 +1,6 @@
-<widget id="com.example.hello" version="0.0.1">
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget id="com.tmas.shopiready" version="0.0.1">
 	<name>Sushilines</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
@@ -6,5 +8,7 @@
 	<access origin="*" />
 	<preference name="Fullscreen" value="true" />
 	<preference name="WebViewBounce" value="false" />
-	<access origin="http://www.shopiready.com" subdomains="true" />
+	<access origin="http://shopiready.com" subdomains="true" />
+	<gap:platform name="ios" />
+	<preference name="phonegap-version" value="3.1.0" />
 </widget>
