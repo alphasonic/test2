@@ -21267,7 +21267,7 @@ var properties = {};
 
 var DEBUG = true;
 properties.appName = 'SushiBar';
-properties.server_name = 'http://www.shopiready.com/sushi-shop-server/';
+properties.server_name = 'http://shopiready.com/action/';
 properties.last_update = 0;
 
 // Declare app level module which depends on filters, and services
