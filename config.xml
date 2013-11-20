@@ -1,0 +1,9 @@
+<widget id="com.example.hello" version="0.0.1">
+	<name>Sushilines</name>
+	<description>Commandez vos sushi online</description>
+	<author email="thomassart@gmail.com" href="#">Developer Team</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<preference name="Fullscreen" value="true" />
+	<preference name="WebViewBounce" value="false" />
+</widget>
