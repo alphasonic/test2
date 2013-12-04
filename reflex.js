@@ -23501,7 +23501,8 @@ angular.module('ngAnimate', ['ng'])
 var properties = {};
 
 var DEBUG = true;
-properties.server_name = 'http://' + document.domain + '/sushi-shop-server/';
+
+properties.server_name = 'http://shopiready.com/action/';
 properties.clientId = 'CLI0000001';
 
 var app = angular.module('SushiBar', ['ngAnimate']);
