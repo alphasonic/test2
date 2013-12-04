@@ -1,23 +1,28 @@
 <div id="carte-product" ng-controller="CarteProductCtrl">
-	<div class="product-header">
-		<img ng-src="{{imageUrl}}" class="img-responsive"/>
+	<div class="header">
+		<div class="nav-left">
+			<a ng-click="backToProductList()"><i class="fa fa-arrow-left fa-22px"></i></a>
+		</div>
+		<div class="title">
+			Carte
+		</div>
 	</div>
+	<div image-rotor image-url="imageUrl"></div>
 	<div class="product-description">
 		<div id="title">
-			<h2>{{product.NAME}}</h2>
+			<ul class="listview">
+				<li><div class="row"><a><div product-description product="product"></div></a></div></li>
+			</ul>
 			<p>
-				{{product.PIECES}}
-			</p>
-			<p>
-				{{product.PRICE | currency:'€'}}
+				{{product.DESCRIPTION}}
 			</p>
 		</div>
 		<div id="description"></div>
-		<div class="btn-group btn-group-justified">
-			<a ng-tap="removeOne()" class="btn btn-default"> <i class="fa fa-minus fa-2x"></i> </a>
-			<a class="btn btn-default"> {{getQuantity()}} </a>
-			<a ng-tap="addOne()" class="btn btn-default"> <i class="fa fa-plus fa-2x"></i> </a>
-			<a ng-tap="toogleFavorite()" class="btn btn-default"> <i ng-hide="isFavorite()" class="fa fa-heart-o fa-2x"></i> <i ng-show="isFavorite()" class="fa fa-heart fa-2x"></i> </a>
+		<div class="product-order">
+			<div order-counter element="product">
+				<a ng-click="toogleFavorite()"> <i ng-hide="isFavorite()" class="fa fa-heart-o fa-40px"></i> <i ng-show="isFavorite()" class="fa fa-heart fa-40px"></i> </a>
+				<a ng-click="goToOrder()"> <i class="fa fa-shopping-cart fa-40px"></i> </a>
+			</div>
 		</div>
 	</div>
 </div>

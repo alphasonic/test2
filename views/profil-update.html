@@ -1,26 +1,24 @@
 <div ng-controller="ProfilUpdateCtrl" class="space-top">
 	<form class="form-horizontal" role="form">
-		<div class="form-group">
-			<label for="prenom" class="col-sm-3 control-label">Prénom:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="prenom" ng-model="prenom" placeholder="Prénom">
+		<div class="space-full">
+			<div class="form-group">
+				<div class="row">
+					<input type="text" class="form-control" id="prenom" ng-model="profil.PRENOM" placeholder="Prénom">
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="nom" ng-model="profil.NOM" placeholder="Nom">
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="prenom" ng-model="profil.EMAIL" placeholder="E-mail">
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="prenom" ng-model="profil.PHONE_NUM" placeholder="N° de téléphone">
+				</div>
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="nom" class="col-sm-3 control-label">Nom:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="nom" ng-model="nom" placeholder="Nom">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="prenom" class="col-sm-3 control-label">E-mail:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="prenom" ng-model="email" placeholder="E-mail">
-			</div>
-		</div>
-		<div class="btn-group btn-group-justified space-hz">
-		  <a class="btn btn-success" ng-tap="validProfil()"><i class="fa fa-check"></i> Modifier</a>
-		  <a class="btn btn-danger" ng-tap="close()"><i class="fa fa-times"></i> Annuler</a>
+		<div class="space-hz btn-group">
+		  <a class="btn btn-rounded" ng-click="validProfil()"><i class="fa fa-check"></i> Modifier</a>
+		  <a class="btn btn-rounded" ng-click="close()"><i class="fa fa-times"></i> Annuler</a>
 		</div>
 	</form>
 </div>

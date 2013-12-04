@@ -1,45 +1,42 @@
 <div ng-controller="ProfilUpdateAddressCtrl" id="profil-update-address">
 	<form class="form-horizontal" role="form">
-		<div class="form-group">
-			<label for="street-name" class="col-sm-3 control-label">Rue:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="street-name" ng-model="address.STREET_NAME" placeholder="Rue">
+		<div class="space-full" ng-show="seachVisible">
+			<div class="form-group">
+				<div class="row">
+					<div class="input-icon">
+						<div class="icon"><i class="fa fa-search fa-22px"></i></div>
+						<div class="custom-input"><input type="text" id="google-search" placeholder="Rue"></div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="street-name2" class="col-sm-3 control-label">Rue 2 (optionnel)</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="street-name2" ng-model="address.STREET_NAME2" placeholder="Rue 2 (optionnel)"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="street-nb" class="col-sm-3 control-label">Num.:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="street-nb" ng-model="address.STREET_NB" placeholder="Numéro"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="bell" class="col-sm-3 control-label">Sonnette:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="bell" ng-model="address.BELL" placeholder="Sonnette"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="postcode" class="col-sm-3 control-label">C. Postal:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="postcode" ng-model="address.POSTCODE" placeholder="Code postal"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="city" class="col-sm-3 control-label">Ville:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="city" ng-model="address.CITY" placeholder="Ville"/>
+
+		<div class="space-full">
+			<div class="form-group">
+				<div class="row">
+					<input type="text" class="form-control" id="street-name" ng-model="address.STREET_NAME" placeholder="Rue">
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="street-name2" ng-model="address.STREET_NAME2" placeholder="Rue 2 (optionnel)"/>
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="street-nb" ng-model="address.STREET_NB" placeholder="Numéro"/>
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="bell" ng-model="address.BELL" placeholder="Sonnette"/>
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="postcode" ng-model="address.POSTCODE" placeholder="Code postal"/>
+				</div>
+				<div class="row">
+					<input type="text" class="form-control" id="city" ng-model="address.CITY" placeholder="Ville"/>
+				</div>
 			</div>
 		</div>
 		
-		<div class="btn-group btn-group-justified">
-		  <a class="btn btn-success" ng-tap="validAddress()"><i class="fa fa-check"></i> <span ng-show="address.ID==null">Créer</span><span ng-hide="address.ID==null">Modifier</span></a>
-		  <a class="btn btn-danger" ng-tap="close()"><i class="fa fa-times"></i> Annuler</a>
+		<div class="space-hz btn-group">
+		  <a class="btn btn-rounded" ng-click="validAddress()"><i class="fa fa-check"></i> <span ng-show="address.ID==null">Créer</span><span ng-hide="address.ID==null">Modifier</span></a>
+		  <a class="btn btn-rounded" ng-click="close()"><i class="fa fa-times"></i> Annuler</a>
 		</div>
 	</form>
 </div>

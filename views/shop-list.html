@@ -1,8 +1,12 @@
 <div ng-controller="ShopListCtrl">
+	<div class="header">
+		<div class="nav-left"><a ng-click="showMenu()"><i class="fa fa-bars fa-22px"></i></a></div>
+		<div class="title">BOUTIQUES</div>
+	</div>
 	<ul class="listview">
 		<li ng-repeat="shop in shops">
 			<div class="row">
-				<a ng-tap="selectShop(shop.ID)">
+				<a ng-click="selectShop(shop.ID)">
 					<div class="col-right-icon">
 						<i class="fa fa-chevron-circle-right"></i>
 					</div>

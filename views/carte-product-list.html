@@ -1,29 +1,37 @@
 <div id="carte-product-list" ng-controller="CarteProductListCtrl">
-	<div class="header-container product-header">
-		<img ng-src="{{imageUrl}}" class="img-responsive"/>
+	<div class="header">
+		<div class="nav-left"><a ng-click="backToCategory()"><i class="fa fa-arrow-left fa-22px"></i></a></div>
+		<div class="title">{{categoryTitle}}</div>
 	</div>
-	<div class="product-list">
-		<ul class="listview" clean-scroll ng-model="selectedElement">
-			<li ng-repeat="prod in products" id="{{prod.ID}}">
-				<div class="row">
-					<div class="col-right-icon">
-						<a data-theme="c" ng-tap="addToCart(prod.ID)" data-icon="plus"><i class="fa fa-plus"></i></a>
-					</div>
-					<div class="col100 has-right-icon">
-						<a ng-tap="displayProduct(prod.ID)">
-						<div class="quantity">
-							<span ng-hide="getQuantity(prod.ID)==0">{{getQuantity(prod.ID)}}</span>
+	<div image-rotor image-url="imageUrl">
+		<div class="product-order">
+			<div order-counter element="selectedProduct">
+				<a ng-click="goToOrder()">
+					<i class="fa fa-shopping-cart fa-30px"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="product-list" ng-iscroll="wrapper" ng-model="selectedElement">
+		<div id="scroller">
+			<ul class="listview">
+				<li ng-repeat="prod in products" id="{{prod.ID}}" last-repeat>
+					<a ng-click="displayProduct(prod.ID)">
+						<div class="row">
+							<div class="col-right-icon">
+								<i class="fa fa-chevron-right"></i>
+							</div>
+							<div class="bubble">
+							    <span ng-hide="getQuantity(prod.ID)==0">{{getQuantity(prod.ID)}}</span>
+							</div>
+							<div class="col100 has-2-right-icon">
+								<div product-description product="prod"></div>
+							</div>
 						</div>
-						<div class="price">
-							{{prod.PIECES}} pcs, {{prod.PRICE | currency:'€'}}
-						</div>
-						<div class="name">
-							{{prod.NAME}}
-						</div>
-						 </a>
-					</div>
-				</div>
-			</li>
-		</ul>
+					</a>
+				</li>
+			</ul>
+			<div class="gap"></div>
+		</div>
 	</div>
 </div>
