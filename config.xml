@@ -14,5 +14,5 @@
 	<preference name="Orientation" value="portrait" />
 	<gap:platform name="ios" />
 	<preference name="phonegap-version" value="3.1.0" />
-	<icon src="images/icon.png" />
+	<icon src="images/icon.png" gap:platform="ios" width="114" height="114"/>
 </widget>
