@@ -5605,11 +5605,13 @@ body {
 }
 
 .styled-select {
-	background-color: #FFF;
+	background-color: #202123;
+	border: 1px solid #404042;
 	border-radius: 7px;
 }
 
 .styled-select select {
+	color: #FFF;
 	background: transparent;
 	padding: 7px;
 	font-size: 16px;

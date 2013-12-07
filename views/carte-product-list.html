@@ -15,14 +15,14 @@
 	<div class="product-list" ng-iscroll="wrapper" ng-model="selectedElement">
 		<div id="scroller">
 			<ul class="listview">
-				<li ng-repeat="prod in products" id="{{prod.ID}}" last-repeat>
-					<a ng-click="displayProduct(prod.ID)">
+				<li ng-repeat="prod in products" id="{{prod.PRODUCT_ID}}" last-repeat>
+					<a ng-click="displayProduct(prod.PRODUCT_ID)">
 						<div class="row">
 							<div class="col-right-icon">
 								<i class="fa fa-chevron-right"></i>
 							</div>
 							<div class="bubble">
-							    <span ng-hide="getQuantity(prod.ID)==0">{{getQuantity(prod.ID)}}</span>
+							    <span ng-hide="getQuantity(prod.PRODUCT_ID)==0">{{getQuantity(prod.PRODUCT_ID)}}</span>
 							</div>
 							<div class="col100 has-2-right-icon">
 								<div product-description product="prod"></div>
