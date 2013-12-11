@@ -103,6 +103,7 @@
 }
 .extra-icons{
 	float: right;
+	clear: right;
 }
 
 .extra-icons a{
@@ -151,6 +152,21 @@
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
 }
+
+.product-description-price .pcs{
+	color: #919193;
+	font-family: "DroidSerif Italic";
+}
+
+.product-description-price .price{
+	color: #c9e9a6;
+}
+
+.favorite-list .favorite-empty{
+	padding-top: 20px;
+	text-align: center;
+}
+
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1536,12 +1552,32 @@
     background: url('img/menu-closer.jpg');
     background: -webkit-image-set(url('img/menu-closer.jpg') 1x, url('img/menu-closer-2x.jpg') 2x);
 }
+.order-step1 .order-empty{
+	padding-top: 20px;
+	text-align: center;
+}
+
 #profil-update-address{
 	padding:10px 0px 0px;
 }
 
 #profil-update-address .btn-group{
 	padding:0 15px;
+}
+
+.shop-list .shop-name{
+	font-size: 18px;
+	color: #FFF;
+}
+
+.shop-list .shop-tel{
+	padding-top: 7px;
+	color: #919193;
+	font-family: "DroidSerif Italic";
+}
+
+.shop-list .shop-dist{
+	color: #c9e9a6;
 }
 
 @font-face {
@@ -1552,6 +1588,11 @@
 @font-face {
 	font-family: "Lato Regular";
 	src: url('fonts/custom/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "DroidSerif Italic";
+	src: url('fonts/custom/DroidSerif-Italic.ttf') format('truetype');
 }
 
 html, body {
@@ -5678,7 +5719,7 @@ body {
 	position: absolute;
 	top: 50%;
 	margin-left: -6px;
-	margin-top: -10px;
+	margin-top: -7px;
 }
 
 .listview .row .bubble {

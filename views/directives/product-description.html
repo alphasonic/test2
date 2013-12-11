@@ -1,5 +1,6 @@
 <div class="product-description-price">
-    {{product.PIECES}} pcs | {{product.PRICE | currency:'€'}}
+    <span class="pcs">{{product.PIECES}} pc |</span>
+    <span class="price">{{product.PRICE | currency:'€'}}</span>
 </div>
 <div class="product-description-name">
     {{product.NAME}}

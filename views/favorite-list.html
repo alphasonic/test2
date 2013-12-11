@@ -1,35 +1,40 @@
-<div ng-controller="FavoriteListCtrl">
+<div class="favorite-list" ng-controller="FavoriteListCtrl">
 	<div class="header">
-		<div class="nav-left"><a ng-click="showMenu()"><i class="fa fa-bars fa-22px"></i></a></div>
-		<div class="title">FAVORIS</div>
+		<div class="nav-left">
+			<a ng-click="showMenu()"><i class="fa fa-bars fa-22px"></i></a>
+		</div>
+		<div class="title">
+			FAVORIS
+		</div>
 	</div>
-	<div class="empty space-top" ng-show="isFavoriteEmpty()">
+	<div class="favorite-empty" ng-show="isFavoriteEmpty()">
 		<i class="fa fa-heart-o fa-4x"></i>
-		<p>Vous n'avez pas de favoris</p>
+		<p>
+			Vous n'avez pas de favoris
+		</p>
 	</div>
 	<div ng-hide="isFavoriteEmpty()">
-		<div image-rotor image-url="imageUrl"></div>
+		<div image-rotor image-url="imageUrl">
+			<div class="product-order">
+				<div order-counter element="selectedProduct">
+					<a ng-click="goToOrder()"> <i class="fa fa-shopping-cart fa-30px"></i> </a>
+				</div>
+			</div>
+		</div>
 		<div class="product-list" ng-iscroll="wrapper" ng-model="selectedElement">
 			<div id="scroller">
 				<ul class="listview">
 					<li ng-repeat="prod in products" id="{{prod.PRODUCT_ID}}" last-repeat>
 						<div class="row">
-							<a ng-click="displayProduct(prod.PRODUCT_ID)">
 							<div class="col-right-icon">
 								<i class="fa fa-chevron-right"></i>
 							</div>
-							<div class="col100 has-right-icon">
-								<div class="quantity">
-									<span ng-hide="getQuantity(prod.PRODUCT_ID)==0">{{getQuantity(prod.PRODUCT_ID)}}</span>
-								</div>
-								<div class="price">
-									{{prod.PIECES}} pcs, {{prod.PRICE | currency:'€'}}
-								</div>
-								<div class="name">
-									{{prod.NAME}}
-								</div>
+							<div class="bubble">
+							    <span ng-hide="getQuantity(prod.PRODUCT_ID)==0">{{getQuantity(prod.PRODUCT_ID)}}</span>
 							</div>
-							</a>
+							<div class="col100 has-2-right-icon">
+								<div product-description product="prod"></div>
+							</div>
 						</div>
 					</li>
 				</ul>
