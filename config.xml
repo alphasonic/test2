@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id="com.example.hello"
         version="0.0.2">
-	<name>Sushilines</name>
+	<name>Sushi Line</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
 	<content src="index.html" />
