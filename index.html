@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>My AngularJS App</title>
 		<link rel="stylesheet" href="css/final.css"/>
-		<script type="text/javascript" src="reflex.js"></script>
+		<script type="text/javascript" src="final.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	</head>
 	<body ng-controller="AppCtrl">
@@ -15,21 +15,21 @@
 			<div ng-switch-default class="animate-menu">
 				<div class="main-menu" ng-class="getMenuClass()">
 					<div>
-						<a class="menu-carte" ng-click="changePage('carte-category-list')"></a>
+						<a class="menu-carte" ng-click="changePage('carte-category-list.html')"></a>
 					</div>
 					<div>
-						<a class="menu-favoris" ng-click="changePage('favorite-list')"></a>
+						<a class="menu-favoris" ng-click="changePage('favorite-list.html')"></a>
 					</div>
 					<div>
-						<a class="menu-commande" ng-click="changePage('order-step1')"></a>
+						<a class="menu-commande" ng-click="changePage('order-step1.html')"></a>
 					</div>
 					<div>
-						<a class="menu-boutiques" ng-click="changePage('shop-list')"></a>
+						<a class="menu-boutiques" ng-click="changePage('shop-list.html')"></a>
 					</div>
 					<div>
-						<a class="menu-profil" ng-click="changePage('profil')"></a>
+						<a class="menu-profil" ng-click="changePage('profil.html')"></a>
 					</div>
-					<div>
+					<div ng-hide="pageEmpty()">
 						<a class="menu-closer" ng-click="closeMenu()"></a>
 					</div>
 				</div>

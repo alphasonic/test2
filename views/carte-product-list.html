@@ -4,6 +4,7 @@
 		<div class="title">{{categoryTitle}}</div>
 	</div>
 	<div image-rotor image-url="imageUrl">
+		<a class="img-click" ng-click="displayProduct(selectedElement)"></a>
 		<div class="product-order">
 			<div order-counter element="selectedProduct">
 				<a ng-click="goToOrder()">
@@ -15,7 +16,7 @@
 	<div class="product-list" ng-iscroll="wrapper" ng-model="selectedElement">
 		<div id="scroller">
 			<ul class="listview">
-				<li ng-repeat="prod in products" id="{{prod.PRODUCT_ID}}" last-repeat>
+				<li ng-repeat="prod in products | orderBy:'NUM_ORDER'" id="{{prod.PRODUCT_ID}}" last-repeat>
 					<a ng-click="displayProduct(prod.PRODUCT_ID)">
 						<div class="row">
 							<div class="col-right-icon">

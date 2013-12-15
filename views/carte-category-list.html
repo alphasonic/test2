@@ -3,11 +3,11 @@
 		<div class="nav-left"><a ng-click="showMenu()"><i class="fa fa-bars fa-22px"></i></a></div>
 		<div class="title">CARTE</div>
 	</div>
-	<div image-rotor image-url="imageUrl"></div>
+	<div image-rotor image-url="imageUrl"><a class="img-click" ng-click="displayProductList(selectedElement)"></a></div>
 	<div class="category-list" ng-iscroll="wrapper" ng-model="selectedElement">
 		<div id="scroller">
 			<ul class="listview">
-				<li ng-repeat="cat in categories" id="{{cat.CATEGORY_ID}}" last-repeat>
+				<li ng-repeat="cat in categories | orderBy:cat.NUM_ORDER" id="{{cat.CATEGORY_ID}}" last-repeat>
 					<a ng-click="displayProductList(cat.CATEGORY_ID)">
 						<div class="row">
 							<div class="col-right-icon">

@@ -10,7 +10,7 @@
 	<div class="order-empty" ng-show="isOrderEmpty()">
 		<i class="fa fa-shopping-cart fa-4x"></i>
 		<p>
-			Veuillez sélectionner au moins un plat avant de passer commande
+			Vous n'avez pas encore ajouté de plats à votre panier
 		</p>
 	</div>
 	<div ng-hide="isOrderEmpty()">
@@ -39,7 +39,7 @@
 			<li>
 				<div class="row">
 					<div class="product-description-price">
-						{{getTotalQuantity()}} pcs | {{getTotalMoney() | currency:'€'}}
+						{{getTotalPieces()}} pcs | {{getTotalMoney() | currency:'€'}}
 					</div>
 					<div class="product-description-name">
 						Total

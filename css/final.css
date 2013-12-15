@@ -67,12 +67,15 @@
 	width: 100%;
 	top: -100%;
 }
-#carte-category-list .category-list li{
-	text-transform:uppercase;
-	height : 56px;
+#carte-category-list .category-list li {
+	text-transform: uppercase;
+	height: 56px;
 }
 
-
+#carte-category-list .img-click {
+	display: block;
+	height: 160px;
+}
 .img-container .product-order{
 	position: absolute;
 	bottom: 0;
@@ -82,6 +85,12 @@
 
 #carte-product-list .product-list li {
 	height: 56px;
+}
+
+#carte-product-list .img-click {
+	display: block;
+	height: 160px;
+	margin: 0 50px 0 110px;
 }
 #carte-product .product-header{
 	width : 100%;
@@ -162,8 +171,18 @@
 	color: #c9e9a6;
 }
 
+.img-container{
+	background-repeat: no-repeat;
+}
+
+
+/* MAP */
+
+.gmnoprint, .gm-style-cc{
+	display : none;
+}
 .favorite-list .favorite-empty{
-	padding-top: 20px;
+	padding-top: 100px;
 	text-align: center;
 }
 
@@ -1513,7 +1532,6 @@
 
 .main-menu .menu-carte {
 	height: 130px;
-    background: url('img/menu-carte.jpg');
     background-repeat: no-repeat;
     background: -webkit-image-set(url('img/menu-carte.jpg') 1x, url('img/menu-carte-2x.jpg') 2x);
 }
@@ -1521,39 +1539,58 @@
 .main-menu .menu-favoris {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: url('img/menu-favoris.jpg');
     background: -webkit-image-set(url('img/menu-favoris.jpg') 1x, url('img/menu-favoris-2x.jpg') 2x);
 }
 
 .main-menu .menu-commande {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: url('img/menu-commande.jpg');
     background: -webkit-image-set(url('img/menu-commande.jpg') 1x, url('img/menu-commande-2x.jpg') 2x);
 }
 
 .main-menu .menu-boutiques {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: url('img/menu-boutiques.jpg');
     background: -webkit-image-set(url('img/menu-boutiques.jpg') 1x, url('img/menu-boutiques-2x.jpg') 2x);
 }
 
 .main-menu .menu-profil {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: url('img/menu-profil.jpg');
     background: -webkit-image-set(url('img/menu-profil.jpg') 1x, url('img/menu-profil-2x.jpg') 2x);
 }
 
 .main-menu .menu-closer {
 	height: 31px;
 	background-repeat: no-repeat;
-    background: url('img/menu-closer.jpg');
     background: -webkit-image-set(url('img/menu-closer.jpg') 1x, url('img/menu-closer-2x.jpg') 2x);
 }
+
+.ng-animate .main-menu .menu-carte {
+    background: url('img/menu-carte.jpg');
+}
+
+.ng-animate .main-menu .menu-favoris {
+    background: url('img/menu-favoris.jpg');
+}
+
+.ng-animate .main-menu .menu-commande {
+    background: url('img/menu-commande.jpg');
+}
+
+.ng-animate .main-menu .menu-boutiques {
+    background: url('img/menu-boutiques.jpg');
+}
+
+.ng-animate .main-menu .menu-profil {
+    background: url('img/menu-profil.jpg');
+}
+
+.ng-animate .main-menu .menu-closer {
+    background: url('img/menu-closer.jpg');
+}
 .order-step1 .order-empty{
-	padding-top: 20px;
+	padding-top: 100px;
 	text-align: center;
 }
 
@@ -1580,6 +1617,33 @@
 	color: #c9e9a6;
 }
 
+.shop .map-canvas{
+	width : 100%;
+	height: 190px;
+}
+
+.shop .shop-name{
+	font-size: 18px;
+	color: #FFF;
+}
+
+.shop .day{
+	display: inline-block;
+	width: 100px;
+	color: #919193;
+	font-family: "DroidSerif Italic";
+}
+
+.shop .address{
+	padding-top: 7px;
+	color: #919193;
+	font-family: "DroidSerif Italic";
+}
+
+.shop .schedule{
+	display: inline-block;
+	color: #c9e9a6;
+}
 @font-face {
 	font-family: "Lato Bold";
 	src: url('fonts/custom/Lato-Bold.ttf') format('truetype');
