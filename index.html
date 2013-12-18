@@ -2,38 +2,16 @@
 <html lang="en" ng-app="SushiBar">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<title>My AngularJS App</title>
 		<link rel="stylesheet" href="css/final.css"/>
 		<script type="text/javascript" src="final.min.js"></script>
+		<script type="text/javascript" src="templates.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	</head>
 	<body ng-controller="AppCtrl">
-		<div ng-switch="showMenu" id="container">
-			<div ng-switch-when="page">
-				<div id="content" ng-include="updatePage()"></div>
-			</div>
-			<div ng-switch-default class="animate-menu">
-				<div class="main-menu" ng-class="getMenuClass()">
-					<div>
-						<a class="menu-carte" ng-click="changePage('carte-category-list.html')"></a>
-					</div>
-					<div>
-						<a class="menu-favoris" ng-click="changePage('favorite-list.html')"></a>
-					</div>
-					<div>
-						<a class="menu-commande" ng-click="changePage('order-step1.html')"></a>
-					</div>
-					<div>
-						<a class="menu-boutiques" ng-click="changePage('shop-list.html')"></a>
-					</div>
-					<div>
-						<a class="menu-profil" ng-click="changePage('profil.html')"></a>
-					</div>
-					<div ng-hide="pageEmpty()">
-						<a class="menu-closer" ng-click="closeMenu()"></a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="content" ng-include="updatePage()" ng-class="getAnimation()"></div>
 	</body>
 </html>
