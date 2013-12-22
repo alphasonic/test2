@@ -15,6 +15,11 @@ app.run(['$templateCache', function($templateCache){  'use strict';
   );
 
 
+  $templateCache.put('views/carte.html',
+    "<div id=carte ng-controller=CarteCtrl><ul class=carousel rn-carousel=\"\" rn-carousel-index=carouselIndex><li ng-include=\"'views/carte-category-list.html'\"></li><li ng-include=\"'views/carte-product-list.html'\"></li><li ng-include=\"'views/carte-product.html'\"></li></ul></div>"
+  );
+
+
   $templateCache.put('views/directives/order-counter.html',
     "<div class=order-counter><div class=extra-icons ng-transclude=\"\"></div><span ng-hide=\"getQuantity()==0\"><a ng-click=removeOne()><i class=\"fa fa-minus-circle\"></i></a><span class=quantity>{{getQuantity()}}</span></span><a ng-click=addOne()><i class=\"fa fa-plus-circle\"></i></a></div>"
   );
@@ -41,7 +46,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/order-step1.html',
-    "<div class=order-step1 ng-controller=OrderStep1Ctrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><div class=order-empty ng-show=isOrderEmpty()><i class=\"fa fa-shopping-cart fa-4x\"></i><p>Vous n'avez pas encore ajouté de plats à votre panier</p></div><div ng-hide=isOrderEmpty()><ul class=listview><li ng-repeat=\"prod in products\"><div class=row><div class=col100><div product-description=\"\" product=prod></div><div order-counter=\"\" element=prod><a ng-click=goToProduct(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-search fa-stack-1x\"></i></span></a><a ng-click=removeAll(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-times fa-stack-1x\"></i></span></a></div></div></div></li><li><div class=row><div class=product-description-price>{{getTotalPieces()}} pcs | {{getTotalMoney() | currency:'€'}}</div><div class=product-description-name>Total</div></div></li></ul><br><div class=space-hz><a class=\"btn btn-rounded\" ng-click=command()>Commander...</a></div></div></div>"
+    "<div class=order-step1 ng-controller=OrderStep1Ctrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><div class=order-empty ng-show=isOrderEmpty()><i class=\"fa fa-shopping-cart fa-4x\"></i><p>Vous n'avez pas encore sélectionné de plats</p></div><div ng-hide=isOrderEmpty()><ul class=listview><li ng-repeat=\"prod in products\"><div class=row><div class=col100><div product-description=\"\" product=prod></div><div order-counter=\"\" element=prod><a ng-click=goToProduct(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-search fa-stack-1x\"></i></span></a><a ng-click=removeAll(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-times fa-stack-1x\"></i></span></a></div></div></div></li><li><div class=row><div class=product-description-price>{{getTotalPieces()}} pcs | {{getTotalMoney() | currency:'€'}}</div><div class=product-description-name>Total</div></div></li></ul><br><div class=space-hz><a class=\"btn btn-rounded\" ng-click=command()>Commander...</a></div></div></div>"
   );
 
 
