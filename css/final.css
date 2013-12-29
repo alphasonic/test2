@@ -1809,6 +1809,15 @@ html, body {
 	padding: 11px;
 }
 
+.header .nav-right {
+	float: right;
+}
+
+.header .nav-right a {
+	display: block;
+	padding: 11px;
+}
+
 .header .title {
 	text-align: center;
 	width: 200px;
@@ -5669,6 +5678,10 @@ body {
 }
 
 /*-------------------- Form --------------------*/
+
+input[type=submit]{
+	margin-left: -1000px;
+}
 
 .form-group {
 	border-radius: 7px;
