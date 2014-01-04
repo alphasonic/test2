@@ -3,7 +3,7 @@
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id="com.example.hello"
 version="0.0.2">
-	<name>Sushiline</name>
+	<name>SUSHILINE</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
 	<content src="index.html" />
@@ -16,7 +16,7 @@ version="0.0.2">
 	<preference name="phonegap-version" value="3.1.0" />
 	<preference name="ios-statusbarstyle" value="black-opaque" />
 	
-	<preference name="AutoHideSplashScreen" value="true" />
+	<preference name="AutoHideSplashScreen" value="false" />
     <preference name="ShowSplashScreenSpinner" value="true" />
 	<feature name="SplashScreen">
 		<param name="ios-package" value="CDVSplashScreen"/>

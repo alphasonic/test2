@@ -59,7 +59,6 @@ ul.rn-carousel-slides > li {
 .ui-resetwrap{position:relative;display:inline-block}.ui-reset{position:absolute;top:0;right:0;z-index:2;display:none;height:100%;cursor:pointer}.ui-resetwrap:hover .ui-reset{display:block}.ui-currency-pos{color:green}.ui-currency-neg{color:red}.ui-currency-zero{color:blue}.ui-currency-pos.ui-bignum,.ui-currency-neg.ui-smallnum{font-size:110%}.ui-match{background:yellow}
 #content {
 	width: 100%;
-	overflow: hidden;
 }
 
 .animate.ng-enter, .animate.ng-leave {
@@ -193,7 +192,7 @@ ul.rn-carousel-slides > li {
 
 #carte-product .product-order{
 	background-color: #222327;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	color: #FFF;
@@ -202,6 +201,11 @@ ul.rn-carousel-slides > li {
 
 #carte-product .product-order > div{
 	padding: 10px;
+}
+
+#carte-product .product-description{
+	padding: 0px 10px 75px 10px;
+	line-height: 22px;
 }
 .extra-icons {
 	float: right;
@@ -5919,7 +5923,6 @@ input[type=submit]{
 }
 
 .col2 {
-	padding-left: 140px;
 	height: 24px;
 	white-space: nowrap;
 	overflow: hidden;
