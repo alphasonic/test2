@@ -108,8 +108,8 @@ ul.rn-carousel-slides > li {
 }
 
 .menu-leave.ng-leave {
-	-webkit-transition-delay: 0.1s;
-  	transition-delay: 0.1s;
+	-webkit-transition-delay: 0.15s;
+  	transition-delay: 0.15s;
 }
 
 .menu-enter.ng-enter {
@@ -5657,6 +5657,10 @@ body {
 	margin: 0;
 }
 
+a {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .form-horizontal .form-group {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -5917,6 +5921,10 @@ input[type=submit]{
 .col2 {
 	padding-left: 140px;
 	height: 24px;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 
 /*-------------------- Others -------------------*/
