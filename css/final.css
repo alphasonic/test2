@@ -107,8 +107,8 @@ ul.rn-carousel-slides > li {
 }
 
 .menu-leave.ng-leave {
-	-webkit-transition-delay: 0.15s;
-  	transition-delay: 0.15s;
+	-webkit-transition-delay: 0.05s;
+  	transition-delay: 0.05s;
 }
 
 .menu-enter.ng-enter {
@@ -129,7 +129,61 @@ ul.rn-carousel-slides > li {
 	top: -100%;
 }
 
-/*---------------------------SLIDE LEFT----------------------------*/
+/*---------------------------SLIDE LEFT ON INCLUDE----------------------------*/
+
+.include-left.ng-enter, .include-left.ng-leave {
+	-webkit-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	
+	-webkit-transition-delay: 0.05s;
+  	transition-delay: 0.05s;
+  	
+	position: absolute;
+	width: 100%;
+}
+
+.include-left.ng-enter {
+	left: 100%;
+}
+.include-left.ng-enter.ng-enter-active {
+	left: 0;
+}
+
+.include-left.ng-leave {
+	left: 0;
+}
+.include-left.ng-leave.ng-leave-active {
+	left: -100%;
+}
+
+/*---------------------------SLIDE RIGHT ON INCLUDE----------------------------*/
+
+.include-right.ng-enter, .include-right.ng-leave {
+	-webkit-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	
+	-webkit-transition-delay: 0.05s;
+  	transition-delay: 0.05s;
+  	
+	position: absolute;
+	width: 100%;
+}
+
+.include-right.ng-enter {
+	left: -100%;
+}
+.include-right.ng-enter.ng-enter-active {
+	left: 0;
+}
+
+.include-right.ng-leave {
+	left: 0;
+}
+.include-right.ng-leave.ng-leave-active {
+	left: 100%;
+}
+
+/*---------------------------SLIDE LEFT ON HIDE----------------------------*/
 
 .animate-show-container {
 	position: relative;
@@ -190,22 +244,20 @@ ul.rn-carousel-slides > li {
 	height:170px;
 }
 
-#carte-product .product-order{
-	background-color: #222327;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	color: #FFF;
+#carte-product .product-description{
+	line-height: 22px;
+}
+
+#carte-product .product-description p{
+	padding: 0px 10px 75px 10px;
+}
+
+#carte-product .fixed-bottom{
 	font-size: 30px;
 }
 
-#carte-product .product-order > div{
+#carte-product .fixed-bottom > div{
 	padding: 10px;
-}
-
-#carte-product .product-description{
-	padding: 0px 10px 75px 10px;
-	line-height: 22px;
 }
 .extra-icons {
 	float: right;
@@ -295,12 +347,12 @@ ul.rn-carousel-slides > li {
 	position: absolute;
 	top: 30%;
 	left: 50%;
-	width: 200px;
+	width: 80%;
 	background-color: #FFF;
 	color: #000;
 	text-align: center;
 	border-radius: 7px;
-	margin-left: -100px;
+	margin-left: -40%;
 }
 
 .popup-gui a {
@@ -1895,6 +1947,16 @@ html, body {
 	width: 100%;
 }
 
+/* Panel fixed bottom */
+
+.fixed-bottom{
+	background-color: #222327;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: #FFF;
+	left: 0;
+}
 /**
 *
 * Copyright 2012 Adobe Systems Inc.;
@@ -5670,6 +5732,10 @@ a {
 	margin-right: 0px;
 }
 
+.center{
+	text-align: center;
+}
+
 /*-------------------- Navbar --------------------*/
 
 .navbar ul {
@@ -5824,7 +5890,7 @@ input[type=submit]{
 	width: 100%;
 	color: #FFF;
 	background: transparent;
-	padding: 7px;
+	padding: 10px;
 	font-size: 16px;
 	border: 0;
 	-webkit-appearance: none;

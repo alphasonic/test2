@@ -11,7 +11,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/carte-product.html',
-    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div><div id=description></div><div class=product-order><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><i ng-hide=isFavorite() class=\"fa fa-heart-o fa-40px\"></i> <i ng-show=isFavorite() class=\"fa fa-heart fa-40px\"></i></a><a ng-click=goToOrder()><i class=\"fa fa-shopping-cart fa-40px\"></i></a></div></div></div></div>"
+    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div><div class=fixed-bottom><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><i ng-hide=isFavorite() class=\"fa fa-heart-o fa-40px\"></i> <i ng-show=isFavorite() class=\"fa fa-heart fa-40px\"></i></a><a ng-click=goToOrder()><i class=\"fa fa-shopping-cart fa-40px\"></i></a></div></div></div></div>"
   );
 
 
@@ -21,7 +21,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/directives/address-display.html',
-    "<div class=address-display ng-style=getImage()><div>{{addressDisplay.STREET_NAME}}<span ng-hide=isStreetName2Null()><br>{{addressDisplay.STREET_NAME2}}</span>{{addressDisplay.STREET_NB}} {{addressDisplay.BELL}}</div><div>{{addressDisplay.POSTCODE}} {{addressDisplay.CITY}}</div></div>"
+    "<div class=address-display ng-style=getImage()><div>{{addressDisplay.STREET_NAME}}&nbsp;{{addressDisplay.STREET_NB}}</div><div>{{addressDisplay.BELL}}</div><div>{{addressDisplay.POSTCODE}}&nbsp;{{addressDisplay.CITY}}</div></div>"
   );
 
 
@@ -61,7 +61,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/order-step1.html',
-    "<div class=order-step1 ng-controller=OrderStep1Ctrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><div class=order-empty ng-show=isOrderEmpty()><i class=\"fa fa-shopping-cart fa-4x\"></i><p>Vous n'avez pas encore sélectionné de plats</p></div><div ng-hide=isOrderEmpty()><ul class=listview><li ng-repeat=\"prod in products\"><div class=row><div class=col100><div product-description=\"\" product=prod></div><div order-counter=\"\" element=prod><a ng-click=goToProduct(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-search fa-stack-1x\"></i></span></a><a ng-click=removeAll(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-times fa-stack-1x\"></i></span></a></div></div></div></li><li><div class=row><div class=product-description-price>{{getTotalPieces()}} pcs | {{getTotalMoney() | currency:'€'}}</div><div class=product-description-name>Total</div></div></li></ul><br><div class=space-hz><a class=\"btn btn-rounded\" ng-click=command()>Commander...</a></div></div></div>"
+    "<div class=order-step1 ng-controller=OrderStep1Ctrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><div ng-iscroll=171><div id=scroller><div><div class=order-empty ng-show=isOrderEmpty()><i class=\"fa fa-shopping-cart fa-4x\"></i><p>Vous n'avez pas encore sélectionné de plats</p></div><div ng-hide=isOrderEmpty()><ul class=listview><li ng-repeat=\"prod in products\"><div class=row><div class=col100><div product-description=\"\" product=prod></div><div order-counter=\"\" element=prod><a ng-click=goToProduct(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-search fa-stack-1x\"></i></span></a><a ng-click=removeAll(prod.PRODUCT_ID)><span class=fa-stack><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-times fa-stack-1x\"></i></span></a></div></div></div></li></ul></div></div></div></div><div><ul class=listview><li><div class=row><div class=product-description-price>{{getTotalPieces()}} pcs | {{getTotalMoney() | currency:'€'}}</div><div class=product-description-name>Total</div></div></li></ul><div class=space-full><a class=\"btn btn-rounded\" ng-click=command()>Commander</a></div></div></div>"
   );
 
 
@@ -72,6 +72,11 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
   $templateCache.put('views/order-step3.html',
     "<div ng-controller=OrderStep3Ctrl><div class=header><div class=nav-left><a ng-click=backToStep2()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><div class=space-full><div class=form-group><div class=styled-select><select ng-model=selectedDay name=select-day id=select-day data-native-menu=false ng-change=setSelectedDay()><option value=0>Aujourd'hui</option><option value=1>Demain</option><option value=2>Après demain</option></select></div></div></div><div class=space-hz><div class=form-group><div class=styled-select><select ng-model=selectedTime name=select-time id=select-time data-native-menu=false ng-change=setSelectedTime() ng-options=\"opt.LABEL for opt in timeList\"></select></div></div></div><div ng-show=isOrderReady() class=space-full><a class=\"btn btn-rounded\" ng-click=validate()><i class=\"fa fa-check\"></i> Envoyer</a></div></div>"
+  );
+
+
+  $templateCache.put('views/order-step4.html',
+    "<div ng-controller=OrderStep4Ctrl><div class=header><div class=nav-left><a ng-click=backToStep2()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>COMMANDE</div></div><br><br><br><br><br><p class=center>Merci,</p><p class=center>VOTRE COMMANDE EST BIEN ENVOYÉE</p><div class=fixed-bottom><div class=space-full><a class=\"btn btn-rounded\" ng-click=backToMenu()>OK</a></div></div></div>"
   );
 
 
@@ -86,7 +91,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/profil-update-address.html',
-    "<div ng-controller=ProfilUpdateAddressCtrl id=profil-update-address><form class=form-horizontal role=form><div class=space-full><form ng-submit=validAddress()><input type=submit value=Envoyer><div class=form-group><div class=row><input id=street-name ng-model=address.STREET_NAME placeholder=\"Rue ligne 1\"></div><div class=row><input id=street-name2 ng-model=address.STREET_NAME2 placeholder=\"Rue ligne 2 (optionnel)\"></div><div class=row><input id=street-nb ng-model=address.STREET_NB placeholder=Numéro></div><div class=row><input id=bell ng-model=address.BELL placeholder=Sonnette></div><div class=row><input id=postcode ng-model=address.POSTCODE placeholder=\"Code postal\" ng-change=refreshCity(true)></div><div class=row><div class=styled-select><input ng-hide=legitPostcode placeholder=Ville disabled><select ng-show=legitPostcode ng-model=address.CITY name=city id=city ng-options=\"elt.CITY for elt in cityList\"></select></div></div></div></form></div><div class=\"space-hz btn-group\"><a class=\"btn btn-rounded\" ng-click=validAddress()><i class=\"fa fa-check\"></i> <span ng-show=\"address.ADDRESS_ID==null\">Créer</span><span ng-hide=\"address.ADDRESS_ID==null\">Modifier</span></a> <a class=\"btn btn-rounded\" ng-click=close()><i class=\"fa fa-times\"></i> Annuler</a></div></form></div>"
+    "<div ng-controller=ProfilUpdateAddressCtrl id=profil-update-address><form class=form-horizontal role=form><div class=space-full><form ng-submit=validAddress()><input type=submit value=Envoyer><div class=form-group><div class=row><input id=street-name ng-model=address.STREET_NAME placeholder=Rue></div><div class=row><input id=street-nb ng-model=address.STREET_NB placeholder=\"Numéro + Boite\"></div><div class=row><input id=bell ng-model=address.BELL placeholder=\"Sonnette (Optionnel)\"></div><div class=row><input id=postcode ng-model=address.POSTCODE placeholder=\"Code postal\" ng-change=refreshCity(true)></div><div class=row><div class=styled-select><input ng-hide=legitPostcode placeholder=Ville disabled><select ng-show=legitPostcode ng-model=address.CITY name=city id=city ng-options=\"elt.CITY for elt in cityList\"></select></div></div></div></form></div><div class=\"space-hz btn-group\"><a class=\"btn btn-rounded\" ng-click=validAddress()><i class=\"fa fa-check\"></i> <span ng-show=\"address.ADDRESS_ID==null\">Créer</span><span ng-hide=\"address.ADDRESS_ID==null\">Modifier</span></a> <a class=\"btn btn-rounded\" ng-click=close()><i class=\"fa fa-times\"></i> Annuler</a></div></form></div>"
   );
 
 
