@@ -11,7 +11,16 @@
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	</head>
 	<body ng-controller="AppCtrl">
-		<div id="content" ng-include="updatePage()" ng-class="getAnimation()"></div>
-		<div popup-gui></div> 
+		<div ng-hide="showContent" id="loading" style="display: table; overflow: hidden;">
+			<div style="display: table-cell; vertical-align: middle;">
+				<div>
+					Chargement...
+				</div>
+			</div>
+		</div>
+		<div ng-include="'views/menu.html'" ng-show="showMenu" class="menu"></div>
+		<div ng-show="showContent" id="content" ng-include="currentPage"></div>
+		<div popup-gui></div>
+		<!-- <div console-gui></div> -->
 	</body>
 </html>
