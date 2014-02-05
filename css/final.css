@@ -3021,6 +3021,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	height: 160px;
 	margin: 0 50px 0 110px;
 }
+
+/* FAVORITE-LIST */
+
+#favorite-list .img-click {
+	display: block;
+	height: 160px;
+	margin: 0 50px 0 110px;
+}
 #carte-product .product-header{
 	width : 100%;
 	background-color: #FFFFFF;

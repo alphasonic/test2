@@ -26,7 +26,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/directives/address-list.html',
-    "<ul class=listview><li ng-repeat=\"address in addresses\"><div class=row><div class=col-right-icon><a ng-click=askRemoveAddress(address)><i class=\"fa fa-times\"></i></a></div><div class=\"col100 has-right-icon\"><a ng-click=displayUpdateAddress(address)><div address-display=address></div></a></div></div></li></ul>"
+    "<ul class=listview><li ng-repeat=\"address in addresses\"><div class=row><div class=col-right-icon><a ng-click=askRemoveAddress(address)><i class=\"fa fa-times\"></i></a></div><div class=\"col100 has-right-icon\"><a ng-click=addressList(address)><div address-display=address></div></a></div></div></li></ul>"
   );
 
 
@@ -56,7 +56,12 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/favorite-list.html',
-    "<div class=favorite-list ng-controller=FavoriteListCtrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>FAVORIS</div></div><div class=favorite-empty ng-show=isFavoriteEmpty()><i class=\"fa fa-heart-o fa-4x\"></i><p>Vous n'avez pas de favoris</p></div><div ng-hide=isFavoriteEmpty()><div image-rotor=\"\" image-url=imageUrl><div class=product-order><div order-counter=\"\" element=selectedProduct><a ng-click=goToOrder()><i class=\"fa fa-shopping-cart fa-30px\"></i></a></div></div></div><div ng-list-scroll=\"\" class=product-list items=\"prod in products\" property-id=PRODUCT_ID ng-model=selectedElement><a ng-click=displayProduct(prod.PRODUCT_ID)><div class=row><div class=col-right-icon><i class=\"fa fa-chevron-right\"></i></div><div class=\"col100 has-right-icon\"><div product-description=\"\" product=prod></div></div></div></a></div></div></div>"
+    "<div id=favorite-list ng-controller=FavoriteListCtrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>FAVORIS</div></div><div class=favorite-empty ng-show=isFavoriteEmpty()><i class=\"fa fa-heart-o fa-4x\"></i><p>Vous n'avez pas de favoris</p></div><div ng-hide=isFavoriteEmpty()><div image-rotor=\"\" image-url=imageUrl><a class=img-click ng-click=displayProduct(selectedElement)></a><div class=product-order><div order-counter=\"\" element=selectedProduct><a ng-click=goToOrder()><i class=\"fa fa-shopping-cart fa-30px\"></i></a></div></div></div><div ng-list-scroll=\"\" class=product-list items=\"prod in products\" property-id=PRODUCT_ID ng-model=selectedElement><a ng-click=displayProduct(prod.PRODUCT_ID)><div class=row><div class=col-right-icon><i class=\"fa fa-chevron-right\"></i></div><div class=\"col100 has-right-icon\"><div product-description=\"\" product=prod></div></div></div></a></div></div></div>"
+  );
+
+
+  $templateCache.put('views/favorite.html',
+    "<div id=carte ng-controller=FavoriteCtrl><div class=page-swipe page-swipe=pageIndex scrollend=scrollEnd><div id=pageScroller><div class=page><div ng-include=\"'views/favorite-list.html'\"></div></div><div class=page><div ng-include=\"'views/carte-product.html'\"></div></div></div></div></div>"
   );
 
 
@@ -66,7 +71,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/menu.html',
-    "<div class=main-menu ng-controller=MenuCtrl ng-iscroll=0><div id=scroller><div><a class=menu-carte ng-click=\"changePage('carte.html')\"></a></div><div><a class=menu-favoris ng-click=\"changePage('favorite-list.html')\"></a></div><div><a class=menu-commande ng-click=\"changePage('order.html')\"></a></div><div><a class=menu-boutiques ng-click=\"changePage('shop.html')\"></a></div><div><a class=menu-profil ng-click=\"changePage('profil.html')\"></a></div><div ng-hide=pageEmpty()><a class=menu-closer ng-click=closeMenu()></a></div></div></div>"
+    "<div class=main-menu ng-controller=MenuCtrl ng-iscroll=0><div id=scroller><div><a class=menu-carte ng-click=\"changePage('carte.html')\"></a></div><div><a class=menu-favoris ng-click=\"changePage('favorite.html')\"></a></div><div><a class=menu-commande ng-click=\"changePage('order.html')\"></a></div><div><a class=menu-boutiques ng-click=\"changePage('shop.html')\"></a></div><div><a class=menu-profil ng-click=\"changePage('profil.html')\"></a></div><div ng-hide=pageEmpty()><a class=menu-closer ng-click=closeMenu()></a></div></div></div>"
   );
 
 
@@ -101,7 +106,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/pick-profil-address.html',
-    "<div ng-controller=PickProfilAddressCtrl><h3>Choisissez une adresse :</h3><ul class=listview><li ng-repeat=\"address in addresses\"><div class=row><div class=\"col100 has-right-icon\"><a ng-click=selectAddress(address)><div address-display=address></div><div ng-hide=isDelivered(address)>Cette addresse n'est pas déservie</div></a></div><div class=col-right-icon><a ng-click=removeAddress(address.ADDRESS_ID)><i class=\"fa fa-times\"></i></a></div></div></li></ul><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=addAddress()><i class=\"fa fa-plus\"></i> Ajouter</a> <a class=\"btn btn-rounded\" ng-click=close()><i class=\"fa fa-times\"></i> Annuler</a></div><div ng-show=showProfilUpdateAddress ng-include=\"'views/profil-update-address.html'\" class=fixed-full></div></div>"
+    "<div ng-controller=PickProfilAddressCtrl><h3>Choisissez une adresse :</h3><div address-list=selectAddress></div><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=addAddress()><i class=\"fa fa-plus\"></i> Ajouter</a> <a class=\"btn btn-rounded\" ng-click=close()><i class=\"fa fa-times\"></i> Annuler</a></div><div ng-show=showProfilUpdateAddress ng-include=\"'views/profil-update-address.html'\" class=fixed-full></div></div>"
   );
 
 
@@ -126,7 +131,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/profil.html',
-    "<div ng-controller=ProfilCtrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>PROFIL</div></div><ul class=listview><li><a ng-click=displayUpdateProfil()><div class=row><div class=col-right-icon><i class=\"fa fa-edit\"></i></div><div class=\"col100 has-right-icon\"><div class=col1>Nom:</div><div class=col2>{{profil.PRENOM}} {{profil.NOM}}</div><div class=col1>E-mail:</div><div class=col2>{{profil.EMAIL}}</div><div class=col1>Telephone:</div><div class=col2>{{profil.PHONE_NUM}}</div></div></div></a></li><li ng-show=isAuth()><a ng-click=displayUpdatePassword()><div class=row><div class=col-right-icon><i class=\"fa fa-edit\"></i></div><div class=\"col100 has-right-icon\"><div class=col1>Mot de passe:</div><div class=col2>**********</div></div></div></a></li></ul><h3>Adresses :</h3><div address-list=\"\"></div><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=displayUpdateAddress(null)><i class=\"fa fa-plus\"></i> Ajouter une adresse</a></div><div profil-auth=updateProfil></div><div ng-show=profilUpdateVisible ng-include=\"'views/profil-update.html'\" class=fixed-full></div><div ng-show=profilUpdateAddressVisible ng-include=\"'views/profil-update-address.html'\" class=fixed-full></div><div ng-show=profilUpdatePasswordVisible ng-include=\"'views/profil-update-password.html'\" class=fixed-full></div></div>"
+    "<div ng-controller=ProfilCtrl><div class=header><div class=nav-left><a ng-click=showMenu()><i class=\"fa fa-bars fa-22px\"></i></a></div><div class=title>PROFIL</div></div><ul class=listview><li><a ng-click=displayUpdateProfil()><div class=row><div class=col-right-icon><i class=\"fa fa-edit\"></i></div><div class=\"col100 has-right-icon\"><div class=col1>Nom:</div><div class=col2>{{profil.PRENOM}} {{profil.NOM}}</div><div class=col1>E-mail:</div><div class=col2>{{profil.EMAIL}}</div><div class=col1>Telephone:</div><div class=col2>{{profil.PHONE_NUM}}</div></div></div></a></li><li ng-show=isAuth()><a ng-click=displayUpdatePassword()><div class=row><div class=col-right-icon><i class=\"fa fa-edit\"></i></div><div class=\"col100 has-right-icon\"><div class=col1>Mot de passe:</div><div class=col2>**********</div></div></div></a></li></ul><h3>Adresses :</h3><div address-list=displayUpdateAddress></div><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=displayUpdateAddress(null)><i class=\"fa fa-plus\"></i> Ajouter une adresse</a></div><div profil-auth=updateProfil></div><div ng-show=profilUpdateVisible ng-include=\"'views/profil-update.html'\" class=fixed-full></div><div ng-show=profilUpdateAddressVisible ng-include=\"'views/profil-update-address.html'\" class=fixed-full></div><div ng-show=profilUpdatePasswordVisible ng-include=\"'views/profil-update-password.html'\" class=fixed-full></div></div>"
   );
 
 

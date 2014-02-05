@@ -17,6 +17,7 @@ version="1.0">
 	<preference name="ios-statusbarstyle" value="black-opaque" />
 	<preference name="target-device" value="handset" />
 	<preference name="AutoHideSplashScreen" value="false" />
+	<gap:plugin name="org.apache.cordova.splashscreen" />
 	
 	<access origin="http://www.shopiready.com" subdomains="true" />
 	<gap:platform name="ios" />
