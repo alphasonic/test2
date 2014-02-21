@@ -3194,7 +3194,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* POPUP */
 
 .popup-bg {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -3206,7 +3206,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .popup-gui {
 	opacity: 1;
-	position: absolute;
+	position: fixed;
 	top: 30%;
 	left: 50%;
 	width: 80%;
@@ -3244,6 +3244,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #pageWrapper {
 	width: 100%;
 	height: 100%;
+}
+
+#disable-all{
+	position:fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 999999;
 }
 
 /* CONSOLE */
