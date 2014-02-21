@@ -15,6 +15,7 @@ version="1.0">
 	<preference name="detect-data-types" value="false" />
 	<preference name="phonegap-version" value="3.3.0" />
 	<preference name="target-device" value="handset" />
+	<preference name="AutoHideSplashScreen" value="false" />
 	
 	<access origin="http://www.shopiready.com" subdomains="true" />
 	<access origin="*" subdomains="true" />
