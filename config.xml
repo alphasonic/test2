@@ -27,6 +27,7 @@ version="1.0">
 	</feature>
 	<feature name="SplashScreen">
 	    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+	    <param name="ios-package" value="CDVSplashScreen" />
 	</feature>
 	
 	<icon src="images/icon_57.png" gap:platform="ios" width="57" height="57"/>
