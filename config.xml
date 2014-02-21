@@ -14,9 +14,7 @@ version="1.0">
 	<preference name="orientation" value="portrait" />
 	<preference name="detect-data-types" value="false" />
 	<preference name="phonegap-version" value="3.3.0" />
-	<preference name="ios-statusbarstyle" value="black-opaque" />
 	<preference name="target-device" value="handset" />
-	<preference name="SplashScreenDelay" value="10000"/>
 	
 	<access origin="http://www.shopiready.com" subdomains="true" />
 	<access origin="*" subdomains="true" />
