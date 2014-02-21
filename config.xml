@@ -13,7 +13,8 @@ version="1.0">
 	<preference name="webviewbounce" value="false" />
 	<preference name="orientation" value="portrait" />
 	<preference name="detect-data-types" value="false" />
-	<preference name="phonegap-version" value="3.3.0" />
+	<preference name="phonegap-version" value="3.1.0" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
 	<preference name="target-device" value="handset" />
 	<preference name="AutoHideSplashScreen" value="false" />
 	
@@ -25,8 +26,13 @@ version="1.0">
 	    <param name="android-package" value="org.apache.cordova.device.Device" />
 	</feature>
 	
+	<feature name="SplashScreen">
+	    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+	    <param name="ios-package" value="CDVSplashScreen" />
+	    <param name="onload" value="true" />
+	</feature>
+	
 	<gap:plugin name="org.apache.cordova.splashscreen" />
-	<gap:plugin name="com.phonegap.plugin.statusbar" />
 	
 	<icon src="images/icon_57.png" gap:platform="ios" width="57" height="57"/>
 	<icon src="images/icon_72.png" gap:platform="ios" width="72" height="72"/>
