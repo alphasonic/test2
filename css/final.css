@@ -3040,10 +3040,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 #carte-product .product-description p{
-	padding: 0px 10px 75px 10px;
+	padding: 0px 10px 10px 10px;
 }
 
-#carte-product .fixed-bottom{
+#carte-product .space-full.commander{
 	font-size: 30px;
 }
 
