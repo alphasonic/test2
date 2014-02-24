@@ -2971,7 +2971,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	height: 1000px;
 	z-index: 9999;
 }
 
