@@ -121,7 +121,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/popup/save-online.html',
-    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=SaveOnlineCtrl><div class=space-full><div class=form-group><div class=row><input type=password id=password ng-model=passwordSave placeholder=\"Mot de passe\"></div></div></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=save()>Sauvegarder</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
+    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=SaveOnlineCtrl><div class=space-full><div class=form-group><div class=row><input id=email ng-model=profil.EMAIL placeholder=E-mail></div><div class=row><input type=password id=password ng-model=passwordSave placeholder=\"Mot de passe\"></div></div></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=save()>Sauvegarder</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
   );
 
 
