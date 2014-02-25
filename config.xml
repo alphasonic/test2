@@ -25,10 +25,7 @@ version="1.0">
 	<access origin="*" subdomains="true" />
 	<gap:platform name="ios" />
 	
-	<feature name="Device">
-	    <param name="android-package" value="org.apache.cordova.device.Device" />
-	</feature>
-	
+	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
 	
