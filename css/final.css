@@ -4712,6 +4712,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	padding-bottom: 8px;
 }
 
+.order-step1 .total-price .price{
+	width: 60px;
+}
+
 .order-step1 .order-counter{
 	margin-top: 10px;
 }
