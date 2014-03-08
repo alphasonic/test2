@@ -4577,7 +4577,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/search-white.png') 1x, url('img/icons/search-white-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/search-white.png') 1x, url('img/icons/search-white-2x.png') 2x);
 }
 
 .icon-delete-white {
@@ -4585,7 +4585,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/delete-white.png') 1x, url('img/icons/delete-white-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/delete-white.png') 1x, url('img/icons/delete-white-2x.png') 2x);
 }
 
 .icon-plus-white {
@@ -4593,7 +4593,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/plus-white.png') 1x, url('img/icons/plus-white-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/plus-white.png') 1x, url('img/icons/plus-white-2x.png') 2x);
 }
 
 .icon-plus-black {
@@ -4601,7 +4601,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/plus-black.png') 1x, url('img/icons/plus-black-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/plus-black.png') 1x, url('img/icons/plus-black-2x.png') 2x);
 }
 
 .icon-minus-white {
@@ -4609,7 +4609,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/minus-white.png') 1x, url('img/icons/minus-white-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/minus-white.png') 1x, url('img/icons/minus-white-2x.png') 2x);
 }
 
 .icon-minus-black {
@@ -4617,7 +4617,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/minus-black.png') 1x, url('img/icons/minus-black-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/minus-black.png') 1x, url('img/icons/minus-black-2x.png') 2x);
 }
 
 .icon-shopping-cart-white {
@@ -4625,7 +4625,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/shopping-cart-white.png') 1x, url('img/icons/shopping-cart-white-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/shopping-cart-white.png') 1x, url('img/icons/shopping-cart-white-2x.png') 2x);
 }
 
 .icon-shopping-cart-black {
@@ -4633,7 +4633,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 30px;
 	height: 30px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/icons/shopping-cart-black.png') 1x, url('img/icons/shopping-cart-black-2x.jpg') 2x);
+    background: -webkit-image-set(url('img/icons/shopping-cart-black.png') 1x, url('img/icons/shopping-cart-black-2x.png') 2x);
 }
 .main-menu a{
 	width: 100%;
