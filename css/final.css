@@ -2843,46 +2843,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	left: -100%;
 }
 
-/*---------------------------ANIMATE MENU----------------------------*/
-/*
- .menu-enter.ng-enter, .menu-leave.ng-leave {
- -webkit-transition: 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
- -moz-transition: 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
- -ms-transition: 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
- -o-transition: 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
- transition: 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-
- -webkit-transform: translate3d(0,0,0);
-
- position: absolute;
- top: 0px;
- width: 100%;
- height: 100%;
- }
-
- .menu-leave.ng-leave {
- -webkit-transition-delay: 0.05s;
- transition-delay: 0.05s;
- }
-
- .menu-enter.ng-enter {
- width: 100%;
- top: -100%;
- }
- .menu-enter.ng-enter.ng-enter-active {
- width: 100%;
- top: 0;
- }
-
- .menu-leave.ng-leave {
- width: 100%;
- top: 0;
- }
- .menu-leave.ng-leave.ng-leave-active {
- width: 100%;
- top: -100%;
- }
-
  /*---------------------------SLIDE LEFT ON INCLUDE----------------------------*/
 
 .include-left.ng-enter, .include-left.ng-leave {
@@ -3121,163 +3081,151 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: popFadeOut;
 }
 .extra-icons {
-	float: right;
-	clear: right;
+	float:right;
+	clear:right;
 }
-
 .extra-icons a {
-	display: block;
-	float: left;
-	margin: 0 5px 0 15px;
+	display:block;
+	float:left;
+	margin:0 5px 0 15px;
 }
-
-.order-counter i {
-	font-size: 30px;
-	padding: 7px;
+.order-counter a {
+	display:inline-block;
 }
-
+.order-counter .reduce-quantity {
+	display:inline-block;
+}
+.order-counter a span {
+	font-size:30px;
+	margin:5px;
+}
 .order-counter .fa-stack {
-	width: 30px;
-	height: 30px;
-	padding: 7px;
+	width:30px;
+	height:30px;
+	padding:7px;
 }
-
 .order-counter .fa-stack i {
-	padding: 0;
+	padding:0;
 }
-
 .order-counter i.fa-stack-1x {
-	font-size: 17px;
-	color: #202123;
-	font-weight: bold;
-	top: 50%;
-	margin-top: -17px
+	font-size:17px;
+	color:#202123;
+	font-weight:bold;
+	top:50%;
+	margin-top:-17px
 }
-
 .order-counter .quantity {
-	display: inline-block;
-	font-size: 20px;
-	position: relative;
-	top: -3px;
+	font-family:"Lato Bold";
+	display:inline-block;
+	font-size:20px;
+	position:relative;
+	top:-11px;
 }
-
 .product-description-price {
-	float: right;
+	float:right;
 }
-
 .product-description-name {
-	white-space: nowrap;
-	overflow: hidden;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
+	color:#FFF;
+	white-space:nowrap;
+	overflow:hidden;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
 }
-
 .product-description-price .pcs {
-	color: #919193;
-	font-family: "DroidSerif Italic";
+	color:#919193;
+	font-family:"DroidSerif Italic";
 }
-
 .product-description-price .price {
-	color: #c9e9a6;
+	display:inline-block;
+	width:50px;
+	text-align:right;
+	color:#c9e9a6;
 }
-
 .img-container {
-	background-repeat: no-repeat;
+	background-repeat:no-repeat;
 }
-
 /* MAP */
-
 .gmnoprint, .gm-style-cc {
-	display: none;
+	display:none;
 }
-
 /* POPUP */
-
 .popup-bg {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: #000;
-	opacity: 0.4;
-	z-index: 99999;
-}
-
-.popup-gui {
-	opacity: 1;
-	position: fixed;
-	top: 30%;
-	left: 50%;
-	width: 80%;
-	background-color: #FFF;
-	color: #000;
-	text-align: center;
-	border-radius: 7px;
-	margin-left: -40%;
-	z-index: 99999;
-}
-
-.popup-gui a {
-	display: block;
-	padding: 7px;
-	border-top: 1px solid #CCC;
-}
-
-.popup-content {
-	padding: 10px;
-}
-
-/* PAGE SWIPE */
-
-.page-swipe {
-	width: 100%;
-	height: 100%
-}
-
-.page {
-	float: left;
-	-webkit-transform: translate3d(0,0,0);
-	height: 100%;
-}
-
-#pageWrapper {
-	width: 100%;
-	height: 100%;
-}
-
-#disable-all{
 	position:fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	display: none;
-	z-index: 999999;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color:#000;
+	opacity:0.4;
+	z-index:99999;
 }
-
+.popup-gui {
+	opacity:1;
+	position:fixed;
+	top:30%;
+	left:50%;
+	width:80%;
+	background-color:#FFF;
+	color:#000;
+	text-align:center;
+	border-radius:7px;
+	margin-left:-40%;
+	z-index:99999;
+}
+.popup-gui a {
+	display:block;
+	padding:7px;
+	border-top:1px solid #CCC;
+}
+.popup-content {
+	padding:10px;
+}
+/* PAGE SWIPE */
+.page-swipe {
+	width:100%;
+	height:100%
+}
+.page {
+	float:left;
+	-webkit-transform:translate3d(0,0,0);
+	height:100%;
+}
+#pageWrapper {
+	width:100%;
+	height:100%;
+}
+#disable-all {
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	display:none;
+	z-index:999999;
+}
 /* CONSOLE */
-
 #console {
-	width: 100%;
-	height: 50px;
-	padding: 5px;
-	background-color: #000;
-	position: fixed;
-	bottom: 0px;
-	overflow: hidden;
-	font-size: 8px;
+	width:100%;
+	height:50px;
+	padding:5px;
+	background-color:#000;
+	position:fixed;
+	bottom:0px;
+	overflow:hidden;
+	font-size:8px;
 }
-
 /* SPINNER */
-
 .spinner-box {
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -15px;
-	margin-top: -15px;
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-15px;
+	margin-top:-15px;
+}
+/* PRICE */
+.price .decimals {
+	font-size:12px;
 }
 
 #favorite-list .favorite-empty{
@@ -4624,6 +4572,69 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   content: "\f196";
 }
 
+.icon-search-white {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/search-white.png') 1x, url('img/icons/search-white-2x.jpg') 2x);
+}
+
+.icon-delete-white {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/delete-white.png') 1x, url('img/icons/delete-white-2x.jpg') 2x);
+}
+
+.icon-plus-white {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/plus-white.png') 1x, url('img/icons/plus-white-2x.jpg') 2x);
+}
+
+.icon-plus-black {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/plus-black.png') 1x, url('img/icons/plus-black-2x.jpg') 2x);
+}
+
+.icon-minus-white {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/minus-white.png') 1x, url('img/icons/minus-white-2x.jpg') 2x);
+}
+
+.icon-minus-black {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/minus-black.png') 1x, url('img/icons/minus-black-2x.jpg') 2x);
+}
+
+.icon-shopping-cart-white {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/shopping-cart-white.png') 1x, url('img/icons/shopping-cart-white-2x.jpg') 2x);
+}
+
+.icon-shopping-cart-black {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    background-repeat: no-repeat;
+    background: -webkit-image-set(url('img/icons/shopping-cart-black.png') 1x, url('img/icons/shopping-cart-black-2x.jpg') 2x);
+}
 .main-menu a{
 	width: 100%;
 	display: block;
@@ -4693,6 +4704,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	text-align: center;
 }
 
+.order-step1 .listview{
+	color: #FFF;
+}
+
+.order-step1 .listview li .row{
+	padding-bottom: 8px;
+}
+
+.order-step1 .order-counter{
+	margin-top: 10px;
+}
+
+.order-step4 #scroller{
+	height: 513px;
+}
+
 #profil-update-address{
 	padding:10px 0px 0px;
 }
@@ -4700,9 +4727,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #profil-update-address .btn-group{
 	padding:0 15px;
 }
-
 .shop-list .shop-name{
-	font-size: 18px;
+	font-size: 20px;
 	color: #FFF;
 }
 
@@ -4710,13 +4736,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	padding-top: 7px;
 	color: #919193;
 	font-family: "DroidSerif Italic";
+	font-size: 14px;
 }
 
 .shop-list .shop-dist{
 	color: #c9e9a6;
 }
 
-.shop .map-canvas{
+.shop-list .listview .row .col-right-icon{
+	padding: 25px 0;
+}
+
+.shop .map-canvas, .shop .map-container{
 	width : 100%;
 	height: 190px;
 }
@@ -4743,6 +4774,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	display: inline-block;
 	color: #c9e9a6;
 }
+
+#shop-details p {
+	padding: 10px 5px;
+	margin:0;
+}
+
 @font-face {
 	font-family: "Lato Bold";
 	src: url('fonts/custom/Lato-Bold.ttf') format('truetype');
@@ -4759,7 +4796,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 *:focus {
-    outline: 0;
+	outline: 0;
 }
 
 html, body {
@@ -4776,7 +4813,7 @@ html, body {
 .header {
 	width: 100%;
 	height: 45px;
-	background-color: #2c2c36;
+	background-color: #2B2B35;
 	color: #FFF;
 }
 
@@ -4861,13 +4898,13 @@ html, body {
 	color: #FFF;
 }
 
-.carousel{
+.carousel {
 	width: 100%;
 }
 
 /* Panel fixed bottom */
 
-.fixed-bottom{
+.fixed-bottom {
 	background-color: #222327;
 	position: fixed;
 	bottom: 0;
@@ -4876,6 +4913,16 @@ html, body {
 	right: 0;
 	z-index: 999;
 }
+
+.grey-droid {
+	color: #919193;
+	font-family: "DroidSerif Italic";
+}
+
+.green-text{
+	color: #c9e9a6;
+}
+
 body {
 	background-color: rgb(32, 33, 35);
 	font-family: "Lato Regular", Verdana, Tahoma;
@@ -4884,7 +4931,7 @@ body {
 }
 
 a {
--webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .form-horizontal .form-group {
@@ -4892,7 +4939,7 @@ a {
 	margin-right: 0px;
 }
 
-.center{
+.center {
 	text-align: center;
 }
 
@@ -4919,7 +4966,7 @@ a {
 
 /*-------------------- Form --------------------*/
 
-input[type=submit]{
+input[type=submit] {
 	margin-left: -10000px;
 }
 
@@ -4939,7 +4986,7 @@ input[type=submit]{
 
 .form-group input {
 	width: 100%;
-	color: #FFF;
+	color: #c9e9a6;
 	border: 0;
 	background: none;
 	font-size: 16px;
@@ -4996,30 +5043,30 @@ input[type=submit]{
 	width: 100%;
 }
 
-.btn-group-tab .tab-border{
+.btn-group-tab .tab-border {
 	width: 10px;
-	display : inline-block;
+	display: inline-block;
 	border-bottom: 1px solid #404042;
 }
 
-.btn-group-tab{
+.btn-group-tab {
 	color: #FFF;
 	border-bottom: 3px solid #FFF;
 }
 
-.btn-group-tab .tab-btn{
+.btn-group-tab .tab-btn {
 	color: #FFF;
 	border: 1px solid #FFF;
 	border-bottom: 0px;
 	margin: 0 -10px -10px -10px;
-	display : inline-block;
+	display: inline-block;
 	padding: 10px;
 	width: 90%;
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 }
 
-.btn-group-tab .tab-btn.active{
+.btn-group-tab .tab-btn.active {
 	color: #000;
 	background-color: #FFF;
 }
@@ -5048,7 +5095,7 @@ input[type=submit]{
 
 .styled-select select {
 	width: 100%;
-	color: #FFF;
+	color: #c9e9a6;
 	background: transparent;
 	padding: 10px;
 	font-size: 16px;
@@ -5089,33 +5136,19 @@ input[type=submit]{
 	display: block;
 }
 
-.listview .row .has-right-icon {
-	padding-right: 20px;
-}
-
 .listview .row .has-2-right-icon {
 	padding-right: 46px;
 }
 
 .listview .row .col-right-icon {
-	top: 0;
-	position: absolute;
-	right: 0;
-	width: 20px;
-	height: 100%;
+	float: right;
+	padding: 0 5px 0 10px;
 	text-align: center;
 }
 
 .listview .row .col-right-icon a {
 	display: block;
 	height: 100%;
-}
-
-.listview .row .col-right-icon i {
-	position: absolute;
-	top: 50%;
-	margin-left: -6px;
-	margin-top: -7px;
 }
 
 .listview .row .bubble {
@@ -5154,6 +5187,7 @@ input[type=submit]{
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	color: #c9e9a6;
 }
 
 /*-------------------- Others -------------------*/
