@@ -8,12 +8,12 @@ version="1.0">
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
 	<content src="index.html" />
 	<access origin="*" />
-	<preference name="fullscreen" value="true" />
+	
 	<preference name="UIWebViewBounce" value="false" />
 	<preference name="webviewbounce" value="false" />
 	<preference name="orientation" value="portrait" />
 	<preference name="detect-data-types" value="false" />
-	<preference name="target-device" value="handset" />
+	
 	<preference name="AutoHideSplashScreen" value="false" />
 	<preference name="SplashScreenDelay" value="10000"/>
 	
