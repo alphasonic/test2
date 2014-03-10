@@ -3,7 +3,7 @@
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id="be.movify.shopiready.sushiline"
 version="1.0">
-	<name>Sushiline</name>
+	<name>SUSHILINE</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
 	<content src="index.html" />
@@ -13,21 +13,20 @@ version="1.0">
 	<preference name="webviewbounce" value="false" />
 	<preference name="orientation" value="portrait" />
 	<preference name="detect-data-types" value="false" />
-	<preference name="phonegap-version" value="3.3.0" />
+	<preference name="phonegap-version" value="3.1.0" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
 	<preference name="target-device" value="handset" />
-	
-	<gap:plugin name="org.apache.cordova.splashscreen" />
 	<preference name="AutoHideSplashScreen" value="false" />
-	<preference name="auto-hide-splash-screen" value="false" />
-	<preference name="FadeSplashScreen" value="true" />
-	<preference name="fade-splash-screen-duration" value="5" />
 	
 	<access origin="http://www.shopiready.com" subdomains="true" />
-	<access origin="*" subdomains="true" />
 	<gap:platform name="ios" />
 	
-	<gap:plugin name="org.apache.cordova.device" />
-	<gap:plugin name="org.apache.cordova.network-information" />
+	<feature name="Device">
+	    <param name="android-package" value="org.apache.cordova.device.Device" />
+	</feature>
+	<feature name="SplashScreen">
+	    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+	</feature>
 	
 	<icon src="images/icon_57.png" gap:platform="ios" width="57" height="57"/>
 	<icon src="images/icon_72.png" gap:platform="ios" width="72" height="72"/>
