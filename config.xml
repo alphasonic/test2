@@ -12,7 +12,6 @@ version="1.0">
 	<preference name="AutoHideSplashScreen" value="false" />
 	<preference name="SplashScreenDelay" value="10000"/>
 	<preference name="orientation" value="portrait" />
-	<preference name="detect-data-types" value="false" />
 	
 	<access origin="http://www.shopiready.com" subdomains="true" />
 	<access origin="*" subdomains="true" />
