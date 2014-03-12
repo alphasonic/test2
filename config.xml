@@ -26,7 +26,7 @@ version="1.0">
 	<access origin="*" subdomains="true" />
 	<gap:platform name="ios" />
 	
-	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.6" />
+	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.5" />
 	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
 	<gap:plugin name="org.apache.cordova.network-information" />
