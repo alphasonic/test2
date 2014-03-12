@@ -4763,12 +4763,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .shop .no-connection{
 	background: #FFFFFF;
-	background-image: -webkit-image-set(url('img/google-maps.jpg') 1x, url('img/google-maps-2x.jpg') 2x);
+	background: -webkit-image-set(url('img/google-maps.jpg') 1x, url('img/google-maps-2x.jpg') 2x);
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
-.shop .neutral-canvas{
+.shop .neutral-canvas, .shop .map-container{
 	background-color: #F2F0E9;
 }
 
