@@ -27,9 +27,9 @@ version="1.0">
 	<gap:platform name="ios" />
 	
 	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.6" />
-	<gap:plugin name="org.apache.cordova.device" />
-	<gap:plugin name="com.phonegap.plugin.statusbar" />
-	<gap:plugin name="org.apache.cordova.network-information"  version="0.2.6" />
+	<gap:plugin name="org.apache.cordova.device" version="0.2.6" />
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="0.2.6" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.6" />
 	
 	<gap:config-file platform="ios" parent="UIStatusBarHidden">
 	    <true/>
