@@ -2989,26 +2989,45 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	height: 160px;
 	margin: 0 50px 0 110px;
 }
-#carte-product .product-header{
-	width : 100%;
+#carte-product .product-header {
+	width: 100%;
 	background-color: #FFFFFF;
-	height:170px;
+	height: 170px;
 }
 
-#carte-product .product-description{
+#carte-product .product-description {
 	line-height: 22px;
 }
 
-#carte-product .product-description p{
+#carte-product .product-description p {
 	padding: 0px 5px 10px 5px;
+	color: #919193;
+	font-family: "DroidSerif Italic";
+	line-height: 24px;
 }
 
-#carte-product .space-full.commander{
+#carte-product .space-full.commander {
 	font-size: 30px;
 }
 
-#carte-product .fixed-bottom > div{
+#carte-product .fixed-bottom > div {
 	padding: 10px;
+}
+
+#carte-product .nbr {
+	display: inline-block;
+	width: 25px;
+	font-family: "Lato Regular";
+	color: #c9e9a6;
+	font-size: 18px;
+}
+
+#carte-product .listview li {
+	font-size: 18px;
+}
+
+#carte-product .product-description-price .price {
+	width: 65px;
 }
 @charset "UTF-8";
 
@@ -4724,6 +4743,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	height: 513px;
 }
 
+.order-step5 .title{
+	padding: 11px;
+}
+
 .order-step3 p{
 	margin: 0;
 	padding: 0 0 0 4px;
@@ -4737,7 +4760,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	padding:0 15px;
 }
 .shop-list .shop-name{
-	font-size: 20px;
+	font-size: 24px;
 	color: #FFF;
 }
 
@@ -4753,7 +4776,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .shop-list .listview .row .col-right-icon{
-	padding: 25px 0;
+	padding: 28px 0;
 }
 
 .shop .map-canvas, .shop .map-container, .shop .no-connection, .shop .neutral-canvas{
@@ -4988,6 +5011,7 @@ a {
 
 input[type=submit] {
 	margin-left: -10000px;
+	position: absolute;
 }
 
 .form-group {
