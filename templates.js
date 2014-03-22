@@ -11,7 +11,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/carte-product.html',
-    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div ng-iscroll=109><div id=scroller><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div></div></div></div><div class=\"space-full commander\"><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><i ng-hide=isFavorite() class=\"fa fa-heart-o fa-30px\"></i> <i ng-show=isFavorite() class=\"fa fa-heart fa-30px\"></i></a> <a ng-click=goToOrder()><span class=icon-shopping-cart-white></span></a></div></div></div>"
+    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div ng-iscroll=109 refresh=refresh><div id=scroller><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div></div></div></div><div class=\"space-full commander\"><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><i ng-hide=isFavorite() class=\"fa fa-heart-o fa-30px\"></i> <i ng-show=isFavorite() class=\"fa fa-heart fa-30px\"></i></a> <a ng-click=goToOrder()><span class=icon-shopping-cart-white></span></a></div></div></div>"
   );
 
 
@@ -86,7 +86,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/order-step4.html',
-    "<div ng-controller=OrderStep4Ctrl class=order-step4><div class=header><div class=nav-left><a ng-click=backToStep3()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>COMMANDE 4/4</div></div><div ng-iscroll=45><div id=scroller><form ng-submit=validCoords()><input type=submit value=Envoyer><div class=space-full><p class=grey-droid>Email de confirmation</p><div class=form-group><div class=row><input type=email id=email ng-model=profil.EMAIL placeholder=Email></div></div><p class=grey-droid>Vos coordonnées</p><div class=form-group><div class=row><input id=nom ng-model=profil.NOM placeholder=Nom></div><div class=row><input id=prenom ng-model=profil.PRENOM placeholder=Prénom></div><div class=row><input id=gsm ng-model=profil.PHONE_NUM placeholder=\"GSM *\"></div></div></div></form><div class=space-full><a class=\"btn btn-rounded\" ng-click=validate()><i class=\"fa fa-check\"></i> Valider</a></div><div profil-auth=\"\"></div></div></div></div>"
+    "<div ng-controller=OrderStep4Ctrl class=order-step4><div class=header><div class=nav-left><a ng-click=backToStep3()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>COMMANDE 4/4</div></div><div ng-iscroll=45><div id=scroller><form ng-submit=validCoords()><input type=submit value=Envoyer><div class=space-full><p class=grey-droid>Email de confirmation</p><div class=form-group><div class=row><input type=email id=email ng-model=profil.EMAIL placeholder=Email ng-disabled=checkLogin></div></div><p class=grey-droid>Vos coordonnées</p><div class=form-group><div class=row><input id=nom ng-model=profil.NOM placeholder=Nom></div><div class=row><input id=prenom ng-model=profil.PRENOM placeholder=Prénom></div><div class=row><input id=gsm ng-model=profil.PHONE_NUM placeholder=\"GSM *\"></div></div></div></form><div class=space-full><a class=\"btn btn-rounded\" ng-click=validate()><i class=\"fa fa-check\"></i> Valider</a></div><div profil-auth=\"\"></div></div></div></div>"
   );
 
 
@@ -116,7 +116,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/popup/pick-shop.html',
-    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=PickShopAddressCtrl><h3>Choisissez une adresse :</h3><ul class=listview><li ng-repeat=\"shop in shops\"><div class=row><a ng-click=selectAddress(shop)><div>{{shop.NAME}}</div><div address-display=shop.address></div></a></div></li></ul></div>"
+    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=PickShopAddressCtrl><h3>Choisissez une adresse :</h3><ul class=listview><li ng-repeat=\"shop in shops\"><div class=row><a ng-click=selectAddress(shop)><div class=shop-name>{{shop.NAME}}</div><div address-display=shop.address></div></a></div></li></ul></div>"
   );
 
 

@@ -3000,7 +3000,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 #carte-product .product-description p {
-	padding: 0px 5px 10px 5px;
+	padding: 0px 5px 10px;
 	color: #919193;
 	font-family: "DroidSerif Italic";
 	line-height: 24px;
@@ -3014,20 +3014,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	padding: 10px;
 }
 
+#carte-product p ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 #carte-product .nbr {
-	display: inline-block;
-	width: 25px;
+	display: table-cell;
+	width: 22px;
 	font-family: "Lato Regular";
 	color: #c9e9a6;
 	font-size: 18px;
 }
 
-#carte-product .listview li {
-	font-size: 18px;
-}
-
-#carte-product .product-description-price .price {
-	width: 65px;
+#carte-product .txt {
+	display: table-cell;
 }
 @charset "UTF-8";
 
@@ -4718,36 +4720,36 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .ng-animate .main-menu .menu-closer {
     background: url('img/menu-closer.jpg');
 }*/
-.order-step1 .order-empty{
+.order-step1 .order-empty {
 	padding-top: 100px;
 	text-align: center;
 }
 
-.order-step1 .listview{
+.order-step1 .listview {
 	color: #FFF;
 }
 
-.order-step1 .listview li .row{
+.order-step1 .listview li .row {
 	padding-bottom: 8px;
 }
 
-.order-step1 .total-price .price{
+.order-step1 .total-price .price {
 	width: 60px;
 }
 
-.order-step1 .order-counter{
+.order-step1 .order-counter {
 	margin-top: 10px;
 }
 
-.order-step4 #scroller{
+.order-step4 #scroller {
 	height: 513px;
 }
 
-.order-step5 .title{
+.order-step5 .header div.title {
 	padding: 11px;
 }
 
-.order-step3 p{
+.order-step3 p {
 	margin: 0;
 	padding: 0 0 0 4px;
 }
@@ -4759,8 +4761,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #profil-update-address .btn-group{
 	padding:0 15px;
 }
-.shop-list .shop-name{
-	font-size: 24px;
+.shop-name{
+	font-size: 20px;
 	color: #FFF;
 }
 
