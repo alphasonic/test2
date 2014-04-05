@@ -101,7 +101,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/popup/authentication.html',
-    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=AuthenticationCtrl><div class=space-full><div class=form-group><div class=row><input type=email name=email ng-model=email placeholder=\"Adresse e-mail\"></div><div class=row><input type=password id=password ng-model=password placeholder=\"Mot de passe\"></div></div></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=auth()>S'identifier</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
+    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=AuthenticationCtrl><div class=space-full><form><input type=submit value=Envoyer><div class=form-group><div class=row><input type=email name=email ng-model=email placeholder=\"Adresse e-mail\" autocomplete=off></div><div class=row><input type=password id=password ng-model=password placeholder=\"Mot de passe\" autocomplete=off></div></div></form></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=auth()>S'identifier</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
   );
 
 
