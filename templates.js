@@ -11,7 +11,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/carte-product.html',
-    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div ng-iscroll=109 refresh=refresh><div id=scroller><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div></div></div></div><div class=\"space-full commander\"><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><i ng-hide=isFavorite() class=\"fa fa-heart-o fa-30px\"></i> <i ng-show=isFavorite() class=\"fa fa-heart fa-30px\"></i></a> <a ng-click=goToOrder()><span class=icon-shopping-cart-white></span></a></div></div></div>"
+    "<div id=carte-product ng-controller=CarteProductCtrl><div class=header><div class=nav-left><a ng-click=back()><i class=\"fa fa-arrow-left fa-22px\"></i></a></div><div class=title>{{categoryTitle}}</div></div><div ng-iscroll=109 refresh=refresh><div id=scroller><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div></div></div></div><div class=\"space-full commander\"><div order-counter=\"\" element=product><a ng-click=toogleFavorite()><span ng-hide=isFavorite() class=icon-favorite-inactive></span> <span ng-show=isFavorite() class=icon-favorite-active></span></a> <a ng-click=goToOrder()><span class=icon-shopping-cart-white></span></a></div></div></div>"
   );
 
 
@@ -101,12 +101,17 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/popup/authentication.html',
-    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=AuthenticationCtrl><div class=space-full><form><input type=submit value=Envoyer><div class=form-group><div class=row><input type=email name=email ng-model=email placeholder=\"Adresse e-mail\" autocomplete=off></div><div class=row><input type=password id=password ng-model=password placeholder=\"Mot de passe\" autocomplete=off></div></div></form></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=auth()>S'identifier</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
+    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=AuthenticationCtrl><div class=space-full><form id=authentication><input type=submit value=Envoyer><div class=form-group><div class=row><input type=email name=email ng-model=email placeholder=\"Adresse e-mail\" autocomplete=off></div><div class=row><input type=password id=password ng-model=password placeholder=\"Mot de passe\" autocomplete=off></div></div></form></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=auth()>S'identifier</a> <a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=openForgotPassword()>Mot de passe oublié ?</a></div></div>"
   );
 
 
   $templateCache.put('views/popup/carte-product-popup.html',
     "<div ng-show=visibility class=\"fixed-full ng-hide\" id=carte-product ng-controller=CarteProductPopupCtrl><div class=header><div class=title>{{categoryTitle}}</div></div><div ng-iscroll=109><div id=scroller><div image-rotor=\"\" image-url=imageUrl></div><div class=product-description><div id=title><ul class=listview><li><div class=row><a><div product-description=\"\" product=product></div></a></div></li></ul><p ng-bind-html=product.DESCRIPTION></p></div></div></div></div><div class=\"space-full fixed-bottom\"><a class=\"btn btn-rounded\" ng-click=back()>OK</a></div></div>"
+  );
+
+
+  $templateCache.put('views/popup/forgot-password.html',
+    "<div ng-show=visibility class=\"fixed-full ng-hide\" ng-controller=ForgotPasswordCtrl><div class=\"grey-droid space-full\">Envoyez-moi un lien via e-mail pour réinitialiser mon mot de passe :</div><div class=space-hz><form><input type=submit value=Envoyer><div class=form-group><div class=row><input type=email name=email ng-model=email placeholder=\"Adresse e-mail\" autocomplete=off></div></div></form></div><div class=\"btn-group btn-group-justified space-full\"><a class=\"btn btn-rounded\" ng-click=action()>M'envoyer un e-mail</a></div><div class=\"btn-group btn-group-justified space-hz\"><a class=\"btn btn-rounded\" ng-click=cancel()>Annuler</a></div></div>"
   );
 
 
