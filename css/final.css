@@ -4745,7 +4745,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	color: #FFF;
 }
 
-.order-step1 .listview li .row {
+.order-step1 .short-bottom li .row {
 	padding-bottom: 8px;
 }
 
@@ -4759,10 +4759,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .order-step4 #scroller {
 	height: 513px;
-}
-
-.order-step5 .header div.title {
-	padding: 11px;
 }
 
 .order-step3 p {
@@ -4908,6 +4904,18 @@ html, body {
 	text-transform: uppercase;
 	font-size: 18px;
 	padding: 11px 41px 11px 0px;
+}
+
+.header .title-alone {
+	text-align: center;
+	padding: 11px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	font-family: "Lato Bold", Verdana, Tahoma;
+	text-transform: uppercase;
+	font-size: 18px;
 }
 
 /*--------------------------- Image container ---------------------------*/
