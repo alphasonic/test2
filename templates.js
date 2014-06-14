@@ -66,7 +66,7 @@ app.run(['$templateCache', function($templateCache){  'use strict';
 
 
   $templateCache.put('views/menu.html',
-    "<div class=main-menu ng-controller=MenuCtrl ng-iscroll=0><div id=scroller><div><a class=menu-carte ng-click=\"changePage('carte.html')\"></a></div><div><a class=menu-favoris ng-click=\"changePage('favorite.html')\"></a></div><div><a class=menu-commande ng-click=\"changePage('order.html')\"></a></div><div><a class=menu-boutiques ng-click=\"changePage('shop.html')\"></a></div><div><a class=menu-profil ng-click=\"changePage('profil.html')\"></a></div><div ng-show=refresh><a class=menu-closer ng-click=closeMenu()></a></div></div></div>"
+    "<div class=main-menu ng-controller=MenuCtrl ng-iscroll=0 refresh=refresh><div id=scroller><div><a class=menu-carte ng-click=\"changePage('carte.html')\"></a></div><div><a class=menu-favoris ng-click=\"changePage('favorite.html')\"></a></div><div><a class=menu-commande ng-click=\"changePage('order.html')\"></a></div><div><a class=menu-boutiques ng-click=\"changePage('shop.html')\"></a></div><div><a class=menu-profil ng-click=\"changePage('profil.html')\"></a></div><div ng-show=refresh><a class=menu-closer ng-click=closeMenu()></a></div></div></div>"
   );
 
 

@@ -4680,31 +4680,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .main-menu .menu-carte {
 	height: 130px;
     background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/menu-carte.jpg') 1x, url('img/menu-carte-2x.jpg') 2x);
+    background: -webkit-image-set(url('../ext/images/brand/menu-carte.jpg') 1x, url('../ext/images/brand/menu-carte-2x.jpg') 2x);
 }
 
 .main-menu .menu-favoris {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/menu-favoris.jpg') 1x, url('img/menu-favoris-2x.jpg') 2x);
+    background: -webkit-image-set(url('../ext/images/brand/menu-favoris.jpg') 1x, url('../ext/images/brand/menu-favoris-2x.jpg') 2x);
 }
 
 .main-menu .menu-commande {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/menu-commande.jpg') 1x, url('img/menu-commande-2x.jpg') 2x);
+    background: -webkit-image-set(url('../ext/images/brand/menu-commande.jpg') 1x, url('../ext/images/brand/menu-commande-2x.jpg') 2x);
 }
 
 .main-menu .menu-boutiques {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/menu-boutiques.jpg') 1x, url('img/menu-boutiques-2x.jpg') 2x);
+    background: -webkit-image-set(url('../ext/images/brand/menu-boutiques.jpg') 1x, url('../ext/images/brand/menu-boutiques-2x.jpg') 2x);
 }
 
 .main-menu .menu-profil {
 	height: 130px;
 	background-repeat: no-repeat;
-    background: -webkit-image-set(url('img/menu-profil.jpg') 1x, url('img/menu-profil-2x.jpg') 2x);
+    background: -webkit-image-set(url('../ext/images/brand/menu-profil.jpg') 1x, url('../ext/images/brand/menu-profil-2x.jpg') 2x);
 }
 
 .main-menu .menu-closer {
@@ -4712,30 +4712,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	background-repeat: no-repeat;
     background: -webkit-image-set(url('img/menu-closer.jpg') 1x, url('img/menu-closer-2x.jpg') 2x);
 }
-/*
-.ng-animate .main-menu .menu-carte {
-    background: url('img/menu-carte.jpg');
-}
-
-.ng-animate .main-menu .menu-favoris {
-    background: url('img/menu-favoris.jpg');
-}
-
-.ng-animate .main-menu .menu-commande {
-    background: url('img/menu-commande.jpg');
-}
-
-.ng-animate .main-menu .menu-boutiques {
-    background: url('img/menu-boutiques.jpg');
-}
-
-.ng-animate .main-menu .menu-profil {
-    background: url('img/menu-profil.jpg');
-}
-
-.ng-animate .main-menu .menu-closer {
-    background: url('img/menu-closer.jpg');
-}*/
 .order-step1 .order-empty {
 	padding-top: 100px;
 	text-align: center;
