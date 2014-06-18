@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
-id="be.movify.shopiready.sushiline"
+id="be.movify.shopiready.misssushi"
 version="1.1">
-	<name>Sushiline</name>
+	<name>Miss Sushi</name>
 	<description>Commandez vos sushi online</description>
 	<author email="thomassart@gmail.com" href="#">Developer Team</author>
 	<content src="index.html" />
